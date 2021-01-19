@@ -1,0 +1,28 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP DRV8825
+D Pololu DRV8825 Breakout board
+K StepStick DRV8825
+$ENDCMP
+#
+$CMP IceBlueStepStick
+D IceBlue StepStick redesign for A4982
+K StepStick A4982
+$ENDCMP
+#
+$CMP SilentStepStick
+D Trinamic Motion Control 2100 Stepper Driver
+K StepStick TMC2100
+$ENDCMP
+#
+$CMP SilentStepStick_SPI
+D Trinamic Motion Control 2130 (SPI) Stepper Driver
+K StepStick TMC2130
+$ENDCMP
+#
+$CMP StepStick
+D Original StepStick for A4988
+K StepStick A4988
+$ENDCMP
+#
+#End Doc Library

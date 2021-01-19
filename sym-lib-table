@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name StepStick)(type Legacy)(uri ${KIPRJMOD}/StepStick.lib)(options "")(descr ""))
+)
