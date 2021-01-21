@@ -11,8 +11,6 @@ This board is based around the ARM MCU STM32F412RGT running at 96MHz in a LQFP-6
 
 ## Plans
 
-Currently, two DC-DC converters are used, with a 5V middle tier which could be brought out for Pi-Power. Adding a Pi compatible interface and EEPROM would make this recognisable as a HAT and allow communication without a USB interface cable.
-
 Future intent is to port MarlinFW to this package, from the PlatformIO platform. Programmers for these devices are relatively cheap, but there remains the possibility of a 0 cost programming option via the USB DFU device capabilties.
 
 Selling these individually is not possible in todays marketplace without some additional testing and regulation, but those requirements need to be investigated and addressed as development progresses.
@@ -25,11 +23,8 @@ As the majority of components are surface mount (SMD) with only a few through-ho
   * ~~MCU Selection~~
   * ~~Power Supplies~~
   * ~~PCB Layout~~
-  * RaspberryPi interface
-    * EEPROM
-    * U(S)ART
-    * Back Power
-    * Mechanical interface
+  * ~~RaspberryPi interface~~ (Abandoned due to lack of space for an interface)
+  * ~~5V Power Output (on 2.54mm pitch 2x2 connector)~~
   * Review
   * Feedback
   * Component Selection (BOM)
