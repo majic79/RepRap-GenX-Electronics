@@ -34,4 +34,13 @@ As the majority of components are surface mount (SMD) with only a few through-ho
 
 ## News
 
-2020-01-19 - Initial Commit
+### 2020-01-21
+  - Abandoned the idea of putting in a Pi Interface - difficult to maintain a 2 layer design and route everything for the 2x20pin GPIO interface of the Pi
+  - Added ZVD Ideal diode for 5V output
+  - Exposed 5V output (after ZVD) for external consumption (e.g. powering a Pi)
+  - Added a copper pour on the top layer for an Earth plane
+  - Re-Routed a few signals to maximise covered area on pour
+  - Upped trace size for power lines to 0.8mm
+
+### 2020-01-19
+	- Initial Commit

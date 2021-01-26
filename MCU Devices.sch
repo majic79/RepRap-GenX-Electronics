@@ -1,0 +1,2464 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 2 2
+Title "RepRap Generation X Electronics"
+Date "2021-01-25"
+Rev "2"
+Comp "NerdSmith"
+Comment1 "Copyright (C) 2021 nerdsmith.co.uk"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 12600 4500 0    50   Input ~ 0
+MOS_HE1
+Text GLabel 12600 3500 0    50   Input ~ 0
+MOS_HE0
+Text GLabel 12600 2100 0    50   Input ~ 0
+MOS_HBED
+$Comp
+L Device:R R?
+U 1 1 63B7105C
+P 13650 4750
+AR Path="/63B7105C" Ref="R?"  Part="1" 
+AR Path="/639A4CF9/63B7105C" Ref="R29"  Part="1" 
+F 0 "R29" V 13857 4750 50  0000 C CNN
+F 1 "1.2K >0.5W" V 13766 4750 50  0000 C CNN
+F 2 "Resistor_SMD:R_2010_5025Metric" V 13580 4750 50  0001 C CNN
+F 3 "~" H 13650 4750 50  0001 C CNN
+F 4 "SMD 2010" H 13650 4750 50  0001 C CNN "Package Type"
+	1    13650 4750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	12400 4900 12400 5000
+Wire Wire Line
+	12400 3900 12400 4000
+Wire Wire Line
+	12400 2500 12400 2600
+$Comp
+L power:GND #PWR?
+U 1 1 63B71065
+P 12400 2600
+AR Path="/63B71065" Ref="#PWR?"  Part="1" 
+AR Path="/639A4CF9/63B71065" Ref="#PWR0101"  Part="1" 
+F 0 "#PWR0101" H 12400 2350 50  0001 C CNN
+F 1 "GND" H 12405 2427 50  0000 C CNN
+F 2 "" H 12400 2600 50  0001 C CNN
+F 3 "" H 12400 2600 50  0001 C CNN
+	1    12400 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 63B7106B
+P 12400 4000
+AR Path="/63B7106B" Ref="#PWR?"  Part="1" 
+AR Path="/639A4CF9/63B7106B" Ref="#PWR0102"  Part="1" 
+F 0 "#PWR0102" H 12400 3750 50  0001 C CNN
+F 1 "GND" H 12405 3827 50  0000 C CNN
+F 2 "" H 12400 4000 50  0001 C CNN
+F 3 "" H 12400 4000 50  0001 C CNN
+	1    12400 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 63B71071
+P 12400 5000
+AR Path="/63B71071" Ref="#PWR?"  Part="1" 
+AR Path="/639A4CF9/63B71071" Ref="#PWR0103"  Part="1" 
+F 0 "#PWR0103" H 12400 4750 50  0001 C CNN
+F 1 "GND" H 12405 4827 50  0000 C CNN
+F 2 "" H 12400 5000 50  0001 C CNN
+F 3 "" H 12400 5000 50  0001 C CNN
+	1    12400 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12400 4900 12500 4900
+Connection ~ 13000 4900
+Wire Wire Line
+	12700 4500 12700 4600
+Wire Wire Line
+	12700 4500 12600 4500
+Wire Wire Line
+	13000 4750 13000 4450
+Connection ~ 13000 4750
+Wire Wire Line
+	13000 4900 13000 4750
+Wire Wire Line
+	13900 4450 14100 4450
+Connection ~ 13900 4450
+Wire Wire Line
+	13000 4900 12900 4900
+Wire Wire Line
+	13600 4450 13900 4450
+Text GLabel 14100 4450 2    50   Input ~ 0
+V_HEAT
+Wire Wire Line
+	13300 4450 13000 4450
+$Comp
+L Device:D D?
+U 1 1 63B71087
+P 13450 4450
+AR Path="/63B71087" Ref="D?"  Part="1" 
+AR Path="/639A4CF9/63B71087" Ref="D20"  Part="1" 
+F 0 "D20" H 13450 4233 50  0000 C CNN
+F 1 "SS14" H 13450 4324 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 13450 4450 50  0001 C CNN
+F 3 "~" H 13450 4450 50  0001 C CNN
+F 4 "SMD D_SMA" H 13450 4450 50  0001 C CNN "Package Type"
+F 5 "HY Electronic Corp" H 13450 4450 50  0001 C CNN "Mfr"
+F 6 "SS14" H 13450 4450 50  0001 C CNN "Mfr PartNumber"
+	1    13450 4450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	13900 4750 13900 4450
+Connection ~ 13900 4750
+Wire Wire Line
+	13800 4750 13900 4750
+Wire Wire Line
+	14000 4900 13000 4900
+Wire Wire Line
+	13900 4800 14000 4800
+Wire Wire Line
+	13900 4800 13900 4750
+Wire Wire Line
+	13100 4750 13000 4750
+$Comp
+L Transistor_FET:IRLIZ44N Q?
+U 1 1 63B71095
+P 12700 4800
+AR Path="/63B71095" Ref="Q?"  Part="1" 
+AR Path="/639A4CF9/63B71095" Ref="Q18"  Part="1" 
+F 0 "Q18" V 12949 4800 50  0000 C CNN
+F 1 "IRLIZ44N" V 13040 4800 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220F-3_Vertical" H 12950 4725 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irliz44n.pdf" H 12700 4800 50  0001 L CNN
+F 4 "TH" H 12700 4800 50  0001 C CNN "Package Type"
+	1    12700 4800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	13500 4750 13400 4750
+$Comp
+L Device:LED D?
+U 1 1 63B7109E
+P 13250 4750
+AR Path="/63B7109E" Ref="D?"  Part="1" 
+AR Path="/639A4CF9/63B7109E" Ref="D17"  Part="1" 
+F 0 "D17" H 13243 4967 50  0000 C CNN
+F 1 "LS R976" H 13243 4876 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Castellated" H 13250 4750 50  0001 C CNN
+F 3 "~" H 13250 4750 50  0001 C CNN
+F 4 "LS R976" H 13250 4750 50  0001 C CNN "Mfr"
+F 5 "SMD 0805" H 13250 4750 50  0001 C CNN "Package Type"
+	1    13250 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 63B710A5
+P 14200 4800
+AR Path="/63B710A5" Ref="J?"  Part="1" 
+AR Path="/639A4CF9/63B710A5" Ref="J23"  Part="1" 
+F 0 "J23" H 14280 4792 50  0000 L CNN
+F 1 "HEAT_E1" H 14280 4701 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-396_A-41791-0002_1x02_P3.96mm_Vertical" H 14200 4800 50  0001 C CNN
+F 3 "~" H 14200 4800 50  0001 C CNN
+F 4 "TH" H 14200 4800 50  0001 C CNN "Package Type"
+	1    14200 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12400 3900 12500 3900
+Wire Wire Line
+	12700 2200 12700 2100
+Connection ~ 13000 2500
+$Comp
+L Transistor_FET:IRLIZ44N Q?
+U 1 1 63B710AF
+P 12700 2400
+AR Path="/63B710AF" Ref="Q?"  Part="1" 
+AR Path="/639A4CF9/63B710AF" Ref="Q16"  Part="1" 
+F 0 "Q16" V 12949 2400 50  0000 C CNN
+F 1 "IRLIZ44N" V 13040 2400 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220F-3_Vertical" H 12950 2325 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irliz44n.pdf" H 12700 2400 50  0001 L CNN
+F 4 "TH" H 12700 2400 50  0001 C CNN "Package Type"
+	1    12700 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	12400 2500 12500 2500
+Wire Wire Line
+	13000 2500 12900 2500
+Wire Wire Line
+	12600 2100 12700 2100
+Connection ~ 13000 3900
+Wire Wire Line
+	12700 3500 12700 3600
+Wire Wire Line
+	12700 3500 12600 3500
+Wire Wire Line
+	13000 2350 13000 2050
+Connection ~ 13000 2350
+Wire Wire Line
+	13000 2500 13000 2350
+Wire Wire Line
+	13900 2050 14100 2050
+Connection ~ 13900 2050
+Wire Wire Line
+	13600 2050 13900 2050
+Text GLabel 14100 2050 2    50   Input ~ 0
+V_HEAT
+Wire Wire Line
+	13300 2050 13000 2050
+$Comp
+L Device:D D?
+U 1 1 63B710C6
+P 13450 2050
+AR Path="/63B710C6" Ref="D?"  Part="1" 
+AR Path="/639A4CF9/63B710C6" Ref="D18"  Part="1" 
+F 0 "D18" H 13450 1833 50  0000 C CNN
+F 1 "SS14" H 13450 1924 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 13450 2050 50  0001 C CNN
+F 3 "~" H 13450 2050 50  0001 C CNN
+F 4 "SMD D_SMA" H 13450 2050 50  0001 C CNN "Package Type"
+F 5 "HY Electronic Corp" H 13450 2050 50  0001 C CNN "Mfr"
+F 6 "SS14" H 13450 2050 50  0001 C CNN "Mfr PartNumber"
+	1    13450 2050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	13900 2350 13900 2050
+Connection ~ 13900 2350
+Wire Wire Line
+	13800 2350 13900 2350
+Wire Wire Line
+	14000 2500 13000 2500
+Wire Wire Line
+	13900 2400 14000 2400
+Wire Wire Line
+	13900 2400 13900 2350
+Wire Wire Line
+	13100 2350 13000 2350
+Wire Wire Line
+	13500 2350 13400 2350
+$Comp
+L Device:LED D?
+U 1 1 63B710D6
+P 13250 2350
+AR Path="/63B710D6" Ref="D?"  Part="1" 
+AR Path="/639A4CF9/63B710D6" Ref="D15"  Part="1" 
+F 0 "D15" H 13243 2567 50  0000 C CNN
+F 1 "LS R976" H 13243 2476 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Castellated" H 13250 2350 50  0001 C CNN
+F 3 "~" H 13250 2350 50  0001 C CNN
+F 4 "LS R976" H 13250 2350 50  0001 C CNN "Mfr"
+F 5 "SMD 0805" H 13250 2350 50  0001 C CNN "Package Type"
+	1    13250 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 63B710DD
+P 13650 2350
+AR Path="/63B710DD" Ref="R?"  Part="1" 
+AR Path="/639A4CF9/63B710DD" Ref="R27"  Part="1" 
+F 0 "R27" V 13857 2350 50  0000 C CNN
+F 1 "1.2K >0.5W" V 13766 2350 50  0000 C CNN
+F 2 "Resistor_SMD:R_2010_5025Metric" V 13580 2350 50  0001 C CNN
+F 3 "~" H 13650 2350 50  0001 C CNN
+F 4 "SMD 2010" H 13650 2350 50  0001 C CNN "Package Type"
+	1    13650 2350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 63B710E4
+P 14200 2400
+AR Path="/63B710E4" Ref="J?"  Part="1" 
+AR Path="/639A4CF9/63B710E4" Ref="J18"  Part="1" 
+F 0 "J18" H 14280 2392 50  0000 L CNN
+F 1 "HEAT_BED" H 14280 2301 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-396_A-41791-0002_1x02_P3.96mm_Vertical" H 14200 2400 50  0001 C CNN
+F 3 "~" H 14200 2400 50  0001 C CNN
+F 4 "TH" H 14200 2400 50  0001 C CNN "Package Type"
+	1    14200 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13000 3750 13000 3450
+Connection ~ 13000 3750
+Wire Wire Line
+	13000 3900 13000 3750
+Wire Wire Line
+	13900 3450 14100 3450
+Connection ~ 13900 3450
+Wire Wire Line
+	13000 3900 12900 3900
+Wire Wire Line
+	13600 3450 13900 3450
+Text GLabel 14100 3450 2    50   Input ~ 0
+V_HEAT
+Wire Wire Line
+	13300 3450 13000 3450
+$Comp
+L Device:D D?
+U 1 1 63B710F6
+P 13450 3450
+AR Path="/63B710F6" Ref="D?"  Part="1" 
+AR Path="/639A4CF9/63B710F6" Ref="D19"  Part="1" 
+F 0 "D19" H 13450 3233 50  0000 C CNN
+F 1 "SS14" H 13450 3324 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 13450 3450 50  0001 C CNN
+F 3 "~" H 13450 3450 50  0001 C CNN
+F 4 "SMD D_SMA" H 13450 3450 50  0001 C CNN "Package Type"
+F 5 "HY Electronic Corp" H 13450 3450 50  0001 C CNN "Mfr"
+F 6 "SS14" H 13450 3450 50  0001 C CNN "Mfr PartNumber"
+	1    13450 3450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	13900 3750 13900 3450
+Connection ~ 13900 3750
+Wire Wire Line
+	13800 3750 13900 3750
+Wire Wire Line
+	14000 3900 13000 3900
+Wire Wire Line
+	13900 3800 14000 3800
+Wire Wire Line
+	13900 3800 13900 3750
+Wire Wire Line
+	13100 3750 13000 3750
+$Comp
+L Transistor_FET:IRLIZ44N Q?
+U 1 1 63B71104
+P 12700 3800
+AR Path="/63B71104" Ref="Q?"  Part="1" 
+AR Path="/639A4CF9/63B71104" Ref="Q17"  Part="1" 
+F 0 "Q17" V 12949 3800 50  0000 C CNN
+F 1 "IRLIZ44N" V 13040 3800 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220F-3_Vertical" H 12950 3725 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irliz44n.pdf" H 12700 3800 50  0001 L CNN
+F 4 "TH" H 12700 3800 50  0001 C CNN "Package Type"
+	1    12700 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	13500 3750 13400 3750
+$Comp
+L Device:LED D?
+U 1 1 63B7110D
+P 13250 3750
+AR Path="/63B7110D" Ref="D?"  Part="1" 
+AR Path="/639A4CF9/63B7110D" Ref="D16"  Part="1" 
+F 0 "D16" H 13243 3967 50  0000 C CNN
+F 1 "LS R976" H 13243 3876 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Castellated" H 13250 3750 50  0001 C CNN
+F 3 "~" H 13250 3750 50  0001 C CNN
+F 4 "LG R976" H 13250 3750 50  0001 C CNN "Mfr"
+F 5 "SMD 0805" H 13250 3750 50  0001 C CNN "Package Type"
+	1    13250 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 63B71114
+P 13650 3750
+AR Path="/63B71114" Ref="R?"  Part="1" 
+AR Path="/639A4CF9/63B71114" Ref="R28"  Part="1" 
+F 0 "R28" V 13857 3750 50  0000 C CNN
+F 1 "1.2K >0.5W" V 13766 3750 50  0000 C CNN
+F 2 "Resistor_SMD:R_2010_5025Metric" V 13580 3750 50  0001 C CNN
+F 3 "~" H 13650 3750 50  0001 C CNN
+F 4 "SMD 2010" H 13650 3750 50  0001 C CNN "Package Type"
+	1    13650 3750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 63B7111B
+P 14200 3800
+AR Path="/63B7111B" Ref="J?"  Part="1" 
+AR Path="/639A4CF9/63B7111B" Ref="J22"  Part="1" 
+F 0 "J22" H 14280 3792 50  0000 L CNN
+F 1 "HEAT_E0" H 14280 3701 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-396_A-41791-0002_1x02_P3.96mm_Vertical" H 14200 3800 50  0001 C CNN
+F 3 "~" H 14200 3800 50  0001 C CNN
+F 4 "TH" H 14200 3800 50  0001 C CNN "Package Type"
+	1    14200 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L StepStick:SilentStepStick_SPI A?
+U 1 1 63C30692
+P 9600 7150
+AR Path="/63C30692" Ref="A?"  Part="1" 
+AR Path="/639A4CF9/63C30692" Ref="A4"  Part="1" 
+F 0 "A4" H 9600 7725 50  0000 C CNN
+F 1 "SilentStepStick_SPI" H 9600 7634 50  0000 C CNN
+F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 9600 7150 50  0001 C CNN
+F 3 "" H 9600 7150 50  0001 C CNN
+F 4 "TH" H 9600 7150 50  0001 C CNN "Package Type"
+	1    9600 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 7300 10400 7300
+Wire Wire Line
+	10050 7200 10400 7200
+Wire Wire Line
+	10050 7100 10400 7100
+$Comp
+L Connector_Generic:Conn_01x04 J?
+U 1 1 63C3069C
+P 10600 7100
+AR Path="/63C3069C" Ref="J?"  Part="1" 
+AR Path="/639A4CF9/63C3069C" Ref="J16"  Part="1" 
+F 0 "J16" H 10680 7092 50  0000 L CNN
+F 1 "E0" H 10680 7001 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 10600 7100 50  0001 C CNN
+F 3 "~" H 10600 7100 50  0001 C CNN
+F 4 "TH" H 10600 7100 50  0001 C CNN "Package Type"
+	1    10600 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 7500 10150 7500
+Wire Wire Line
+	10150 7500 10150 8250
+Connection ~ 10150 7500
+Connection ~ 10150 6900
+$Comp
+L Device:C C?
+U 1 1 63C306A7
+P 10400 6800
+AR Path="/63C306A7" Ref="C?"  Part="1" 
+AR Path="/639A4CF9/63C306A7" Ref="C21"  Part="1" 
+F 0 "C21" V 10652 6800 50  0000 C CNN
+F 1 "100nF 25V" V 10561 6800 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10438 6650 50  0001 C CNN
+F 3 "~" H 10400 6800 50  0001 C CNN
+F 4 "SMD 0402" H 10400 6800 50  0001 C CNN "Package Type"
+	1    10400 6800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 63C306AE
+P 10400 7400
+AR Path="/63C306AE" Ref="C?"  Part="1" 
+AR Path="/639A4CF9/63C306AE" Ref="C22"  Part="1" 
+F 0 "C22" V 10652 7400 50  0000 C CNN
+F 1 "100nF 6.3V" V 10561 7400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10438 7250 50  0001 C CNN
+F 3 "~" H 10400 7400 50  0001 C CNN
+F 4 "SMD 0402" H 10400 7400 50  0001 C CNN "Package Type"
+	1    10400 7400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10550 6800 10550 6900
+Wire Wire Line
+	10550 6900 10150 6900
+Wire Wire Line
+	10550 7400 10550 7500
+Wire Wire Line
+	10550 7500 10150 7500
+Wire Wire Line
+	10150 6900 10150 7500
+Wire Wire Line
+	10050 7000 10400 7000
+Wire Wire Line
+	10050 6900 10150 6900
+Wire Wire Line
+	10200 5500 11100 5500
+Connection ~ 10200 5500
+Wire Wire Line
+	10200 4200 10200 5500
+Wire Wire Line
+	10200 4200 10250 4200
+Connection ~ 10200 4200
+Wire Wire Line
+	10200 3000 10250 3000
+Connection ~ 10200 3000
+$Comp
+L power:VDD #PWR?
+U 1 1 63C306C2
+P 10250 2100
+AR Path="/63C306C2" Ref="#PWR?"  Part="1" 
+AR Path="/639A4CF9/63C306C2" Ref="#PWR0104"  Part="1" 
+F 0 "#PWR0104" H 10250 1950 50  0001 C CNN
+F 1 "VDD" H 10265 2273 50  0000 C CNN
+F 2 "" H 10250 2100 50  0001 C CNN
+F 3 "" H 10250 2100 50  0001 C CNN
+	1    10250 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 4900 10250 4900
+Connection ~ 10100 4900
+Wire Wire Line
+	10100 3600 10100 4900
+Wire Wire Line
+	10100 3600 10250 3600
+Connection ~ 10100 3600
+Wire Wire Line
+	10100 2400 10100 3600
+Wire Wire Line
+	10100 2400 10250 2400
+Connection ~ 10100 2400
+Wire Wire Line
+	10100 2250 10100 2400
+Wire Wire Line
+	10150 5600 10150 6050
+Wire Wire Line
+	10250 6050 10150 6050
+Wire Wire Line
+	11100 6050 10550 6050
+Wire Wire Line
+	11100 5500 11100 6050
+Connection ~ 10150 2500
+Wire Wire Line
+	10550 2500 10150 2500
+Wire Wire Line
+	10550 2400 10550 2500
+Wire Wire Line
+	10050 2400 10100 2400
+Wire Wire Line
+	10550 3100 10150 3100
+Wire Wire Line
+	10550 3000 10550 3100
+Wire Wire Line
+	10050 3000 10200 3000
+Wire Wire Line
+	10550 3700 10150 3700
+Wire Wire Line
+	10550 3600 10550 3700
+Wire Wire Line
+	10050 3600 10100 3600
+Wire Wire Line
+	10550 4300 10150 4300
+Wire Wire Line
+	10550 4200 10550 4300
+Wire Wire Line
+	10050 4200 10200 4200
+Wire Wire Line
+	10550 5000 10150 5000
+Wire Wire Line
+	10550 4900 10550 5000
+Wire Wire Line
+	10050 4900 10100 4900
+Wire Wire Line
+	10150 3100 10150 3700
+Wire Wire Line
+	10050 5500 10200 5500
+$Comp
+L Device:C C?
+U 1 1 63C306E8
+P 10400 6050
+AR Path="/63C306E8" Ref="C?"  Part="1" 
+AR Path="/639A4CF9/63C306E8" Ref="C20"  Part="1" 
+F 0 "C20" V 10652 6050 50  0000 C CNN
+F 1 "100nF 6.3V" V 10561 6050 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10438 5900 50  0001 C CNN
+F 3 "~" H 10400 6050 50  0001 C CNN
+F 4 "SMD 0402" H 10400 6050 50  0001 C CNN "Package Type"
+	1    10400 6050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 63C306EF
+P 10400 4900
+AR Path="/63C306EF" Ref="C?"  Part="1" 
+AR Path="/639A4CF9/63C306EF" Ref="C19"  Part="1" 
+F 0 "C19" V 10652 4900 50  0000 C CNN
+F 1 "100nF 25V" V 10561 4900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10438 4750 50  0001 C CNN
+F 3 "~" H 10400 4900 50  0001 C CNN
+F 4 "SMD 0402" H 10400 4900 50  0001 C CNN "Package Type"
+	1    10400 4900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 63C306F6
+P 10400 4200
+AR Path="/63C306F6" Ref="C?"  Part="1" 
+AR Path="/639A4CF9/63C306F6" Ref="C16"  Part="1" 
+F 0 "C16" V 10652 4200 50  0000 C CNN
+F 1 "100nF 6.3V" V 10561 4200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10438 4050 50  0001 C CNN
+F 3 "~" H 10400 4200 50  0001 C CNN
+F 4 "SMD 0402" H 10400 4200 50  0001 C CNN "Package Type"
+	1    10400 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 63C306FD
+P 10400 3600
+AR Path="/63C306FD" Ref="C?"  Part="1" 
+AR Path="/639A4CF9/63C306FD" Ref="C8"  Part="1" 
+F 0 "C8" V 10652 3600 50  0000 C CNN
+F 1 "100nF 25V" V 10561 3600 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10438 3450 50  0001 C CNN
+F 3 "~" H 10400 3600 50  0001 C CNN
+F 4 "SMD 0402" H 10400 3600 50  0001 C CNN "Package Type"
+	1    10400 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 63C30704
+P 10400 3000
+AR Path="/63C30704" Ref="C?"  Part="1" 
+AR Path="/639A4CF9/63C30704" Ref="C7"  Part="1" 
+F 0 "C7" V 10148 3000 50  0000 C CNN
+F 1 "100nF 6.3V" V 10239 3000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10438 2850 50  0001 C CNN
+F 3 "~" H 10400 3000 50  0001 C CNN
+F 4 "SMD 0402" H 10400 3000 50  0001 C CNN "Package Type"
+	1    10400 3000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 63C3070B
+P 10400 2400
+AR Path="/63C3070B" Ref="C?"  Part="1" 
+AR Path="/639A4CF9/63C3070B" Ref="C2"  Part="1" 
+F 0 "C2" V 10148 2400 50  0000 C CNN
+F 1 "100nF 25V" V 10239 2400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10438 2250 50  0001 C CNN
+F 3 "~" H 10400 2400 50  0001 C CNN
+F 4 "SMD 0402" H 10400 2400 50  0001 C CNN "Package Type"
+	1    10400 2400
+	0    1    1    0   
+$EndComp
+Connection ~ 10150 3100
+Wire Wire Line
+	10150 2500 10150 3100
+Wire Wire Line
+	10050 2500 10150 2500
+Connection ~ 10150 3700
+Wire Wire Line
+	10050 3100 10150 3100
+Connection ~ 10150 4300
+Wire Wire Line
+	10150 3700 10150 4300
+Wire Wire Line
+	10050 3700 10150 3700
+Connection ~ 10150 5000
+Wire Wire Line
+	10150 4300 10150 5000
+Wire Wire Line
+	10050 4300 10150 4300
+Connection ~ 10150 5600
+Wire Wire Line
+	10150 5000 10150 5600
+Wire Wire Line
+	10050 5000 10150 5000
+Wire Wire Line
+	10050 5600 10150 5600
+Wire Wire Line
+	10300 5400 10500 5400
+Connection ~ 10300 5400
+Wire Wire Line
+	10300 5900 10300 5400
+Wire Wire Line
+	10500 5900 10300 5900
+Wire Wire Line
+	10350 5300 10500 5300
+Connection ~ 10350 5300
+Wire Wire Line
+	10350 5800 10350 5300
+Wire Wire Line
+	10500 5800 10350 5800
+Wire Wire Line
+	10400 5200 10500 5200
+Connection ~ 10400 5200
+Wire Wire Line
+	10400 5700 10400 5200
+Wire Wire Line
+	10500 5700 10400 5700
+Wire Wire Line
+	10450 5100 10500 5100
+Connection ~ 10450 5100
+Wire Wire Line
+	10450 5600 10450 5100
+Wire Wire Line
+	10500 5600 10450 5600
+$Comp
+L Connector_Generic:Conn_01x04 J3_?
+U 1 1 63C30731
+P 10700 5700
+AR Path="/63C30731" Ref="J3_?"  Part="1" 
+AR Path="/639A4CF9/63C30731" Ref="J3_2"  Part="1" 
+F 0 "J3_2" H 10780 5692 50  0000 L CNN
+F 1 "AXIS_Z2" H 10780 5601 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 10700 5700 50  0001 C CNN
+F 3 "~" H 10700 5700 50  0001 C CNN
+F 4 "TH" H 10700 5700 50  0001 C CNN "Package Type"
+	1    10700 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L StepStick:SilentStepStick_SPI A?
+U 1 1 63C30738
+P 9600 5250
+AR Path="/63C30738" Ref="A?"  Part="1" 
+AR Path="/639A4CF9/63C30738" Ref="A3"  Part="1" 
+F 0 "A3" H 9600 5825 50  0000 C CNN
+F 1 "SilentStepStick_SPI" H 9600 5734 50  0000 C CNN
+F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 9600 5250 50  0001 C CNN
+F 3 "" H 9600 5250 50  0001 C CNN
+F 4 "TH" H 9600 5250 50  0001 C CNN "Package Type"
+	1    9600 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 5400 10300 5400
+Wire Wire Line
+	10050 5100 10450 5100
+Wire Wire Line
+	10050 5300 10350 5300
+Wire Wire Line
+	10050 5200 10400 5200
+$Comp
+L Connector_Generic:Conn_01x04 J3_?
+U 1 1 63C30743
+P 10700 5200
+AR Path="/63C30743" Ref="J3_?"  Part="1" 
+AR Path="/639A4CF9/63C30743" Ref="J3_1"  Part="1" 
+F 0 "J3_1" H 10780 5192 50  0000 L CNN
+F 1 "AXIS_Z1" H 10780 5101 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 10700 5200 50  0001 C CNN
+F 3 "~" H 10700 5200 50  0001 C CNN
+F 4 "TH" H 10700 5200 50  0001 C CNN "Package Type"
+	1    10700 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L StepStick:SilentStepStick_SPI A?
+U 1 1 63C3074A
+P 9600 3950
+AR Path="/63C3074A" Ref="A?"  Part="1" 
+AR Path="/639A4CF9/63C3074A" Ref="A2"  Part="1" 
+F 0 "A2" H 9600 4525 50  0000 C CNN
+F 1 "SilentStepStick_SPI" H 9600 4434 50  0000 C CNN
+F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 9600 3950 50  0001 C CNN
+F 3 "" H 9600 3950 50  0001 C CNN
+F 4 "TH" H 9600 3950 50  0001 C CNN "Package Type"
+	1    9600 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 4100 10400 4100
+Wire Wire Line
+	10050 3800 10400 3800
+Wire Wire Line
+	10050 4000 10400 4000
+Wire Wire Line
+	10050 3900 10400 3900
+$Comp
+L Connector_Generic:Conn_01x04 J?
+U 1 1 63C30755
+P 10600 3900
+AR Path="/63C30755" Ref="J?"  Part="1" 
+AR Path="/639A4CF9/63C30755" Ref="J15"  Part="1" 
+F 0 "J15" H 10680 3892 50  0000 L CNN
+F 1 "AXIS_Y" H 10680 3801 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 10600 3900 50  0001 C CNN
+F 3 "~" H 10600 3900 50  0001 C CNN
+F 4 "TH" H 10600 3900 50  0001 C CNN "Package Type"
+	1    10600 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 2900 10400 2900
+Wire Wire Line
+	10050 2600 10400 2600
+Wire Wire Line
+	10050 2800 10400 2800
+Wire Wire Line
+	10050 2700 10400 2700
+$Comp
+L Connector_Generic:Conn_01x04 J?
+U 1 1 63C30760
+P 10600 2700
+AR Path="/63C30760" Ref="J?"  Part="1" 
+AR Path="/639A4CF9/63C30760" Ref="J14"  Part="1" 
+F 0 "J14" H 10680 2692 50  0000 L CNN
+F 1 "AXIS_X" H 10680 2601 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 10600 2700 50  0001 C CNN
+F 3 "~" H 10600 2700 50  0001 C CNN
+F 4 "TH" H 10600 2700 50  0001 C CNN "Package Type"
+	1    10600 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 6800 10100 6800
+Wire Wire Line
+	10050 7400 10200 7400
+Wire Wire Line
+	10100 4900 10100 6800
+Connection ~ 10100 6800
+Wire Wire Line
+	10100 6800 10250 6800
+Wire Wire Line
+	10200 5500 10200 7400
+Connection ~ 10200 7400
+Wire Wire Line
+	10200 7400 10250 7400
+Wire Wire Line
+	10150 6900 10150 6050
+Wire Wire Line
+	10200 3000 10200 2350
+Wire Wire Line
+	10200 2350 10250 2350
+Wire Wire Line
+	10250 2350 10250 2100
+Wire Wire Line
+	10200 3000 10200 4200
+Wire Wire Line
+	9150 3100 8450 3100
+Wire Wire Line
+	9150 3000 8450 3000
+Wire Wire Line
+	9150 4300 8450 4300
+Wire Wire Line
+	9150 4200 8450 4200
+Wire Wire Line
+	9150 5500 8450 5500
+Wire Wire Line
+	9150 5600 8450 5600
+Wire Wire Line
+	9150 7400 8450 7400
+Wire Wire Line
+	9150 7500 8450 7500
+Text Label 8800 3000 0    50   ~ 0
+STEP_X
+Text Label 8800 3100 0    50   ~ 0
+DIR_X
+Text Label 8800 4200 0    50   ~ 0
+STEP_Y
+Text Label 8800 4300 0    50   ~ 0
+DIR_Y
+Text Label 8800 5500 0    50   ~ 0
+STEP_Z
+Text Label 8800 5600 0    50   ~ 0
+DIR_Z
+Text Label 8800 7400 0    50   ~ 0
+STEP_E0
+Text Label 8800 7500 0    50   ~ 0
+DIR_E0
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 63C3078C
+P 3100 1300
+AR Path="/63C3078C" Ref="J?"  Part="1" 
+AR Path="/639A4CF9/63C3078C" Ref="J1"  Part="1" 
+F 0 "J1" H 3180 1342 50  0000 L CNN
+F 1 "END_X" H 3180 1251 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 3100 1300 50  0001 C CNN
+F 3 "~" H 3100 1300 50  0001 C CNN
+F 4 "TH" H 3100 1300 50  0001 C CNN "Package Type"
+	1    3100 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 63C30793
+P 3100 1700
+AR Path="/63C30793" Ref="J?"  Part="1" 
+AR Path="/639A4CF9/63C30793" Ref="J2"  Part="1" 
+F 0 "J2" H 3180 1742 50  0000 L CNN
+F 1 "END_Y" H 3180 1651 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 3100 1700 50  0001 C CNN
+F 3 "~" H 3100 1700 50  0001 C CNN
+F 4 "TH" H 3100 1700 50  0001 C CNN "Package Type"
+	1    3100 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 63C3079A
+P 3100 2100
+AR Path="/63C3079A" Ref="J?"  Part="1" 
+AR Path="/639A4CF9/63C3079A" Ref="J4"  Part="1" 
+F 0 "J4" H 3180 2142 50  0000 L CNN
+F 1 "END_Z" H 3180 2051 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 3100 2100 50  0001 C CNN
+F 3 "~" H 3100 2100 50  0001 C CNN
+F 4 "TH" H 3100 2100 50  0001 C CNN "Package Type"
+	1    3100 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 63C307A1
+P 5950 1200
+AR Path="/63C307A1" Ref="J?"  Part="1" 
+AR Path="/639A4CF9/63C307A1" Ref="J11"  Part="1" 
+F 0 "J11" H 6030 1192 50  0000 L CNN
+F 1 "TEMP_BED" H 6030 1101 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 5950 1200 50  0001 C CNN
+F 3 "~" H 5950 1200 50  0001 C CNN
+F 4 "TH" H 5950 1200 50  0001 C CNN "Package Type"
+	1    5950 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 63C307A8
+P 5950 1900
+AR Path="/63C307A8" Ref="J?"  Part="1" 
+AR Path="/639A4CF9/63C307A8" Ref="J12"  Part="1" 
+F 0 "J12" H 6030 1892 50  0000 L CNN
+F 1 "TEMP_E0" H 6030 1801 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 5950 1900 50  0001 C CNN
+F 3 "~" H 5950 1900 50  0001 C CNN
+F 4 "TH" H 5950 1900 50  0001 C CNN "Package Type"
+	1    5950 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 1300 2750 1300
+Wire Wire Line
+	2750 1300 2750 1700
+Wire Wire Line
+	2750 1700 2900 1700
+Wire Wire Line
+	2750 1700 2750 2100
+Wire Wire Line
+	2750 2100 2900 2100
+Connection ~ 2750 1700
+Wire Wire Line
+	2750 2100 2750 2500
+Wire Wire Line
+	5600 1300 5750 1300
+Connection ~ 2750 2100
+Wire Wire Line
+	5600 1300 5600 2000
+Wire Wire Line
+	5600 2000 5750 2000
+Wire Wire Line
+	2900 1200 2800 1200
+Wire Wire Line
+	2800 1200 2800 1600
+Wire Wire Line
+	2800 1600 2900 1600
+Wire Wire Line
+	2800 1600 2800 2000
+Wire Wire Line
+	2800 2000 2900 2000
+Connection ~ 2800 1600
+Wire Wire Line
+	2800 2000 2800 2400
+Connection ~ 2800 2000
+Wire Wire Line
+	5200 1900 5750 1900
+Wire Wire Line
+	2800 1200 2800 1100
+Connection ~ 2800 1200
+Wire Wire Line
+	2900 1800 2350 1800
+Wire Wire Line
+	2900 2200 2350 2200
+Text Label 2400 2200 0    50   ~ 0
+END_Z
+Text Label 2400 1800 0    50   ~ 0
+END_Y
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 63C307C9
+P 3100 2500
+AR Path="/63C307C9" Ref="J?"  Part="1" 
+AR Path="/639A4CF9/63C307C9" Ref="J6"  Part="1" 
+F 0 "J6" H 3180 2542 50  0000 L CNN
+F 1 "END_E0" H 3180 2451 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 3100 2500 50  0001 C CNN
+F 3 "~" H 3100 2500 50  0001 C CNN
+F 4 "TH" H 3100 2500 50  0001 C CNN "Package Type"
+	1    3100 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 2400 2800 2400
+Wire Wire Line
+	2900 2500 2750 2500
+Wire Wire Line
+	2900 2600 2350 2600
+Text Label 2400 2600 0    50   ~ 0
+END_E0
+$Comp
+L Device:R R?
+U 1 1 63C307D4
+P 5200 1450
+AR Path="/63C307D4" Ref="R?"  Part="1" 
+AR Path="/639A4CF9/63C307D4" Ref="R16"  Part="1" 
+F 0 "R16" V 5407 1450 50  0000 C CNN
+F 1 "4.7K 1%" V 5316 1450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5130 1450 50  0001 C CNN
+F 3 "~" H 5200 1450 50  0001 C CNN
+F 4 "SMD 0603" H 5200 1450 50  0001 C CNN "Package Type"
+	1    5200 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 63C307DB
+P 5200 2150
+AR Path="/63C307DB" Ref="R?"  Part="1" 
+AR Path="/639A4CF9/63C307DB" Ref="R17"  Part="1" 
+F 0 "R17" H 5270 2196 50  0000 L CNN
+F 1 "4.7K 1%" H 5270 2105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5130 2150 50  0001 C CNN
+F 3 "~" H 5200 2150 50  0001 C CNN
+F 4 "SMD 0603" H 5200 2150 50  0001 C CNN "Package Type"
+	1    5200 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 1200 5200 1300
+Wire Wire Line
+	5750 1200 5200 1200
+Wire Wire Line
+	5200 2000 5200 1900
+Wire Wire Line
+	5700 2400 5200 2400
+Wire Wire Line
+	5200 2400 5200 2300
+Wire Wire Line
+	5200 1600 5700 1600
+Wire Wire Line
+	5700 1600 5700 2400
+Wire Wire Line
+	5200 1200 4900 1200
+Connection ~ 5200 1200
+Wire Wire Line
+	5200 1900 4900 1900
+Connection ~ 5200 1900
+Text Label 5000 1200 0    50   ~ 0
+TEMP_BED
+Text Label 5000 1900 0    50   ~ 0
+TEMP_E0
+$Comp
+L power:GND #PWR?
+U 1 1 63C307EE
+P 2750 3250
+AR Path="/63C307EE" Ref="#PWR?"  Part="1" 
+AR Path="/639A4CF9/63C307EE" Ref="#PWR0105"  Part="1" 
+F 0 "#PWR0105" H 2750 3000 50  0001 C CNN
+F 1 "GND" H 2755 3077 50  0000 C CNN
+F 2 "" H 2750 3250 50  0001 C CNN
+F 3 "" H 2750 3250 50  0001 C CNN
+	1    2750 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 3250 2750 2950
+Connection ~ 2750 2500
+Wire Wire Line
+	5700 1600 5700 1050
+Connection ~ 5700 1600
+Wire Wire Line
+	2900 1400 2350 1400
+Text Label 2400 1400 0    50   ~ 0
+END_X
+$Comp
+L power:VDD #PWR?
+U 1 1 63C30800
+P 2800 1100
+AR Path="/63C30800" Ref="#PWR?"  Part="1" 
+AR Path="/639A4CF9/63C30800" Ref="#PWR0109"  Part="1" 
+F 0 "#PWR0109" H 2800 950 50  0001 C CNN
+F 1 "VDD" H 2815 1273 50  0000 C CNN
+F 2 "" H 2800 1100 50  0001 C CNN
+F 3 "" H 2800 1100 50  0001 C CNN
+	1    2800 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDDA #PWR?
+U 1 1 63C30806
+P 5700 1050
+AR Path="/63C30806" Ref="#PWR?"  Part="1" 
+AR Path="/639A4CF9/63C30806" Ref="#PWR0110"  Part="1" 
+F 0 "#PWR0110" H 5700 900 50  0001 C CNN
+F 1 "VDDA" H 5715 1223 50  0000 C CNN
+F 2 "" H 5700 1050 50  0001 C CNN
+F 3 "" H 5700 1050 50  0001 C CNN
+	1    5700 1050
+	1    0    0    -1  
+$EndComp
+Text GLabel 10100 2250 1    50   Input ~ 0
+V_MOT
+Wire Wire Line
+	9150 5000 8750 5000
+Wire Wire Line
+	9150 5100 8750 5100
+Wire Wire Line
+	9150 5200 8750 5200
+Wire Wire Line
+	9150 5300 8750 5300
+Wire Wire Line
+	9150 4900 8450 4900
+Text Label 8800 4900 0    50   ~ 0
+EN_Z
+Text Label 8800 5000 0    50   ~ 0
+SPI_MOSI
+Text Label 8800 5100 0    50   ~ 0
+SPI_SCK
+Text Label 8800 5200 0    50   ~ 0
+CS_Z
+Text Label 8800 5300 0    50   ~ 0
+SPI_MISO
+Wire Wire Line
+	9150 2400 8450 2400
+Wire Wire Line
+	9150 2500 8750 2500
+Wire Wire Line
+	9150 2600 8750 2600
+Wire Wire Line
+	9150 2700 8750 2700
+Wire Wire Line
+	9150 2800 8750 2800
+Wire Wire Line
+	9150 3600 8450 3600
+Wire Wire Line
+	9150 3700 8750 3700
+Wire Wire Line
+	9150 3800 8750 3800
+Wire Wire Line
+	9150 3900 8750 3900
+Wire Wire Line
+	9150 4000 8750 4000
+Wire Wire Line
+	9150 6800 8450 6800
+Wire Wire Line
+	9150 6900 8750 6900
+Wire Wire Line
+	9150 7000 8750 7000
+Wire Wire Line
+	9150 7100 8750 7100
+Wire Wire Line
+	9150 7200 8750 7200
+Text Label 8800 6800 0    50   ~ 0
+EN_E0
+Text Label 8800 6900 0    50   ~ 0
+SPI_MOSI
+Text Label 8800 7000 0    50   ~ 0
+SPI_SCK
+Text Label 8800 7100 0    50   ~ 0
+CS_E0
+Text Label 8800 7200 0    50   ~ 0
+SPI_MISO
+Text Label 8800 4000 0    50   ~ 0
+SPI_MISO
+Text Label 8800 3900 0    50   ~ 0
+CS_Y
+Text Label 8800 3800 0    50   ~ 0
+SPI_SCK
+Text Label 8800 3700 0    50   ~ 0
+SPI_MOSI
+Text Label 8800 3600 0    50   ~ 0
+EN_Y
+Text Label 8800 2800 0    50   ~ 0
+SPI_MISO
+Text Label 8800 2700 0    50   ~ 0
+CS_X
+Text Label 8800 2600 0    50   ~ 0
+SPI_SCK
+Text Label 8800 2500 0    50   ~ 0
+SPI_MOSI
+Text Label 8800 2400 0    50   ~ 0
+EN_X
+Entry Wire Line
+	8750 2500 8650 2600
+Entry Wire Line
+	8750 2600 8650 2700
+Entry Wire Line
+	8750 2700 8650 2800
+Entry Wire Line
+	8750 2800 8650 2900
+Entry Wire Line
+	8750 3700 8650 3800
+Entry Wire Line
+	8750 3800 8650 3900
+Entry Wire Line
+	8750 3900 8650 4000
+Entry Wire Line
+	8750 4000 8650 4100
+Entry Wire Line
+	8750 5000 8650 5100
+Entry Wire Line
+	8750 5100 8650 5200
+Entry Wire Line
+	8750 5200 8650 5300
+Entry Wire Line
+	8750 5300 8650 5400
+Entry Wire Line
+	8750 6900 8650 7000
+Entry Wire Line
+	8750 7000 8650 7100
+Entry Wire Line
+	8750 7100 8650 7200
+Entry Wire Line
+	8750 7200 8650 7300
+Text Label 3300 8500 0    50   ~ 0
+PWMH_E0
+Text Label 3300 6850 0    50   ~ 0
+PWMH_BED
+Text Label 3300 10050 0    50   ~ 0
+PWMH_E1
+$Comp
+L StepStick:SilentStepStick_SPI A?
+U 1 1 63C3084F
+P 9600 8500
+AR Path="/63C3084F" Ref="A?"  Part="1" 
+AR Path="/639A4CF9/63C3084F" Ref="A5"  Part="1" 
+F 0 "A5" H 9600 9075 50  0000 C CNN
+F 1 "SilentStepStick_SPI" H 9600 8984 50  0000 C CNN
+F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 9600 8500 50  0001 C CNN
+F 3 "" H 9600 8500 50  0001 C CNN
+F 4 "TH" H 9600 8500 50  0001 C CNN "Package Type"
+	1    9600 8500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 8650 10400 8650
+Wire Wire Line
+	10050 8550 10400 8550
+Wire Wire Line
+	10050 8450 10400 8450
+$Comp
+L Connector_Generic:Conn_01x04 J?
+U 1 1 63C30859
+P 10600 8450
+AR Path="/63C30859" Ref="J?"  Part="1" 
+AR Path="/639A4CF9/63C30859" Ref="J17"  Part="1" 
+F 0 "J17" H 10680 8442 50  0000 L CNN
+F 1 "E1" H 10680 8351 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 10600 8450 50  0001 C CNN
+F 3 "~" H 10600 8450 50  0001 C CNN
+F 4 "TH" H 10600 8450 50  0001 C CNN "Package Type"
+	1    10600 8450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 8850 10150 8850
+Wire Wire Line
+	10150 8850 10150 9000
+Connection ~ 10150 8850
+Connection ~ 10150 8250
+$Comp
+L Device:C C?
+U 1 1 63C30864
+P 10400 8150
+AR Path="/63C30864" Ref="C?"  Part="1" 
+AR Path="/639A4CF9/63C30864" Ref="C23"  Part="1" 
+F 0 "C23" V 10652 8150 50  0000 C CNN
+F 1 "100nF 25V" V 10561 8150 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10438 8000 50  0001 C CNN
+F 3 "~" H 10400 8150 50  0001 C CNN
+F 4 "SMD 0402" H 10400 8150 50  0001 C CNN "Package Type"
+	1    10400 8150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 63C3086B
+P 10400 8750
+AR Path="/63C3086B" Ref="C?"  Part="1" 
+AR Path="/639A4CF9/63C3086B" Ref="C24"  Part="1" 
+F 0 "C24" V 10652 8750 50  0000 C CNN
+F 1 "100nF 6.3V" V 10561 8750 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10438 8600 50  0001 C CNN
+F 3 "~" H 10400 8750 50  0001 C CNN
+F 4 "SMD 0402" H 10400 8750 50  0001 C CNN "Package Type"
+	1    10400 8750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10550 8150 10550 8250
+Wire Wire Line
+	10550 8250 10150 8250
+Wire Wire Line
+	10550 8750 10550 8850
+Wire Wire Line
+	10550 8850 10150 8850
+Wire Wire Line
+	10050 8350 10400 8350
+Wire Wire Line
+	10050 8250 10150 8250
+Wire Wire Line
+	10050 8150 10100 8150
+Wire Wire Line
+	10050 8750 10200 8750
+Wire Wire Line
+	10100 6800 10100 8150
+Connection ~ 10100 8150
+Wire Wire Line
+	10100 8150 10250 8150
+Connection ~ 10200 8750
+Wire Wire Line
+	10200 8750 10250 8750
+Wire Wire Line
+	9150 8750 8450 8750
+Wire Wire Line
+	9150 8850 8450 8850
+Text Label 8800 8750 0    50   ~ 0
+STEP_E1
+Text Label 8800 8850 0    50   ~ 0
+DIR_E1
+Wire Wire Line
+	9150 8150 8450 8150
+Wire Wire Line
+	9150 8250 8750 8250
+Wire Wire Line
+	9150 8350 8750 8350
+Wire Wire Line
+	9150 8450 8750 8450
+Wire Wire Line
+	9150 8550 8750 8550
+Text Label 8800 8150 0    50   ~ 0
+EN_E1
+Text Label 8800 8250 0    50   ~ 0
+SPI_MOSI
+Text Label 8800 8350 0    50   ~ 0
+SPI_SCK
+Text Label 8800 8450 0    50   ~ 0
+CS_E1
+Text Label 8800 8550 0    50   ~ 0
+SPI_MISO
+Entry Wire Line
+	8750 8250 8650 8350
+Entry Wire Line
+	8750 8350 8650 8450
+Entry Wire Line
+	8750 8450 8650 8550
+Entry Wire Line
+	8750 8550 8650 8650
+Wire Wire Line
+	10200 7400 10200 8750
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 63C30895
+P 5950 2700
+AR Path="/63C30895" Ref="J?"  Part="1" 
+AR Path="/639A4CF9/63C30895" Ref="J13"  Part="1" 
+F 0 "J13" H 6030 2692 50  0000 L CNN
+F 1 "TEMP_E1" H 6030 2601 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 5950 2700 50  0001 C CNN
+F 3 "~" H 5950 2700 50  0001 C CNN
+F 4 "TH" H 5950 2700 50  0001 C CNN "Package Type"
+	1    5950 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 2800 5750 2800
+$Comp
+L power:GND #PWR?
+U 1 1 63C3089C
+P 5600 3300
+AR Path="/63C3089C" Ref="#PWR?"  Part="1" 
+AR Path="/639A4CF9/63C3089C" Ref="#PWR0111"  Part="1" 
+F 0 "#PWR0111" H 5600 3050 50  0001 C CNN
+F 1 "GND" H 5605 3127 50  0000 C CNN
+F 2 "" H 5600 3300 50  0001 C CNN
+F 3 "" H 5600 3300 50  0001 C CNN
+	1    5600 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 2800 5600 3300
+Wire Wire Line
+	5200 2700 5750 2700
+$Comp
+L Device:R R?
+U 1 1 63C308A5
+P 5200 2950
+AR Path="/63C308A5" Ref="R?"  Part="1" 
+AR Path="/639A4CF9/63C308A5" Ref="R18"  Part="1" 
+F 0 "R18" H 5270 2996 50  0000 L CNN
+F 1 "4.7K 1%" H 5270 2905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5130 2950 50  0001 C CNN
+F 3 "~" H 5200 2950 50  0001 C CNN
+F 4 "SMD 0603" H 5200 2950 50  0001 C CNN "Package Type"
+	1    5200 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 2800 5200 2700
+Wire Wire Line
+	5700 3200 5200 3200
+Wire Wire Line
+	5200 3200 5200 3100
+Wire Wire Line
+	5200 2700 4900 2700
+Connection ~ 5200 2700
+Text Label 5000 2700 0    50   ~ 0
+TEMP_E1
+Wire Wire Line
+	5700 3200 5700 2400
+Connection ~ 5700 2400
+Wire Wire Line
+	5600 2800 5600 2000
+Connection ~ 5600 2800
+Connection ~ 5600 2000
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 63C308B9
+P 3100 2950
+AR Path="/63C308B9" Ref="J?"  Part="1" 
+AR Path="/639A4CF9/63C308B9" Ref="J7"  Part="1" 
+F 0 "J7" H 3180 2992 50  0000 L CNN
+F 1 "END_E1" H 3180 2901 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 3100 2950 50  0001 C CNN
+F 3 "~" H 3100 2950 50  0001 C CNN
+F 4 "TH" H 3100 2950 50  0001 C CNN "Package Type"
+	1    3100 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 2850 2800 2850
+Wire Wire Line
+	2800 2850 2800 2400
+Connection ~ 2800 2400
+Wire Wire Line
+	2900 2950 2750 2950
+Connection ~ 2750 2950
+Wire Wire Line
+	2750 2950 2750 2500
+Wire Wire Line
+	2900 3050 2350 3050
+Text Label 2400 3050 0    50   ~ 0
+END_E1
+$Comp
+L StepStick:SilentStepStick_SPI A?
+U 1 1 63C308C9
+P 9600 2750
+AR Path="/63C308C9" Ref="A?"  Part="1" 
+AR Path="/639A4CF9/63C308C9" Ref="A1"  Part="1" 
+F 0 "A1" H 9600 3325 50  0000 C CNN
+F 1 "SilentStepStick_SPI" H 9600 3234 50  0000 C CNN
+F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 9600 2750 50  0001 C CNN
+F 3 "" H 9600 2750 50  0001 C CNN
+F 4 "TH" H 9600 2750 50  0001 C CNN "Package Type"
+	1    9600 2750
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9150 2900
+NoConn ~ 9150 4100
+NoConn ~ 9150 5400
+NoConn ~ 9150 7300
+NoConn ~ 9150 8650
+$Comp
+L power:GND #PWR?
+U 1 1 63C308D4
+P 10150 9000
+AR Path="/63C308D4" Ref="#PWR?"  Part="1" 
+AR Path="/639A4CF9/63C308D4" Ref="#PWR0112"  Part="1" 
+F 0 "#PWR0112" H 10150 8750 50  0001 C CNN
+F 1 "GND" H 10155 8827 50  0000 C CNN
+F 2 "" H 10150 9000 50  0001 C CNN
+F 3 "" H 10150 9000 50  0001 C CNN
+	1    10150 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 63C308DA
+P 4050 4650
+AR Path="/63C308DA" Ref="#PWR?"  Part="1" 
+AR Path="/639A4CF9/63C308DA" Ref="#PWR0113"  Part="1" 
+F 0 "#PWR0113" H 4050 4400 50  0001 C CNN
+F 1 "GND" H 4055 4477 50  0000 C CNN
+F 2 "" H 4050 4650 50  0001 C CNN
+F 3 "" H 4050 4650 50  0001 C CNN
+	1    4050 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 4150 3500 4150
+Wire Wire Line
+	4050 4550 4050 4650
+Wire Wire Line
+	4250 4550 4050 4550
+Wire Wire Line
+	4450 4150 4350 4150
+Wire Wire Line
+	4450 4250 4450 4150
+Wire Wire Line
+	5150 4550 4650 4550
+Wire Wire Line
+	5150 4450 5150 4550
+Connection ~ 5150 4550
+Wire Wire Line
+	5400 4550 5150 4550
+Wire Wire Line
+	5400 4350 5400 4550
+Wire Wire Line
+	5600 4350 5400 4350
+Wire Wire Line
+	5150 4000 5150 4150
+Wire Wire Line
+	5400 4000 5150 4000
+Wire Wire Line
+	5400 4000 5700 4000
+Connection ~ 5400 4000
+Wire Wire Line
+	5400 4250 5400 4000
+Wire Wire Line
+	5600 4250 5400 4250
+$Comp
+L Device:R R?
+U 1 1 63C308F3
+P 4200 4150
+AR Path="/63C308F3" Ref="R?"  Part="1" 
+AR Path="/639A4CF9/63C308F3" Ref="R8"  Part="1" 
+F 0 "R8" V 3993 4150 50  0000 C CNN
+F 1 "1K" V 4084 4150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4130 4150 50  0001 C CNN
+F 3 "~" H 4200 4150 50  0001 C CNN
+F 4 "SMD" H 4200 4150 50  0001 C CNN "Package Type"
+	1    4200 4150
+	0    1    1    0   
+$EndComp
+Text GLabel 5700 4000 2    50   Input ~ 0
+V_MOT
+$Comp
+L Device:D D?
+U 1 1 63C308FD
+P 5150 4300
+AR Path="/63C308FD" Ref="D?"  Part="1" 
+AR Path="/639A4CF9/63C308FD" Ref="D5"  Part="1" 
+F 0 "D5" H 5150 4083 50  0000 C CNN
+F 1 "SS14" H 5150 4174 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 5150 4300 50  0001 C CNN
+F 3 "~" H 5150 4300 50  0001 C CNN
+F 4 "SMD D_SMA" H 5150 4300 50  0001 C CNN "Package Type"
+F 5 "HY Electronic Corp" H 5150 4300 50  0001 C CNN "Mfr"
+F 6 "SS14" H 5150 4300 50  0001 C CNN "Mfr PartNumber"
+	1    5150 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 63C30904
+P 5800 4250
+AR Path="/63C30904" Ref="J?"  Part="1" 
+AR Path="/639A4CF9/63C30904" Ref="J9"  Part="1" 
+F 0 "J9" H 5880 4242 50  0000 L CNN
+F 1 "FAN_0" H 5880 4151 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 5800 4250 50  0001 C CNN
+F 3 "~" H 5800 4250 50  0001 C CNN
+F 4 "TH" H 5800 4250 50  0001 C CNN "Package Type"
+	1    5800 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 63C3090A
+P 4050 5700
+AR Path="/63C3090A" Ref="#PWR?"  Part="1" 
+AR Path="/639A4CF9/63C3090A" Ref="#PWR0114"  Part="1" 
+F 0 "#PWR0114" H 4050 5450 50  0001 C CNN
+F 1 "GND" H 4055 5527 50  0000 C CNN
+F 2 "" H 4050 5700 50  0001 C CNN
+F 3 "" H 4050 5700 50  0001 C CNN
+	1    4050 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 5200 3500 5200
+Wire Wire Line
+	4050 5600 4050 5700
+Wire Wire Line
+	4250 5600 4050 5600
+Wire Wire Line
+	4450 5200 4350 5200
+Wire Wire Line
+	4450 5300 4450 5200
+Wire Wire Line
+	5150 5600 4650 5600
+Wire Wire Line
+	5150 5500 5150 5600
+Connection ~ 5150 5600
+Wire Wire Line
+	5400 5600 5150 5600
+Wire Wire Line
+	5400 5400 5400 5600
+Wire Wire Line
+	5600 5400 5400 5400
+Wire Wire Line
+	5150 5050 5150 5200
+Wire Wire Line
+	5400 5050 5150 5050
+Wire Wire Line
+	5400 5050 5700 5050
+Connection ~ 5400 5050
+Wire Wire Line
+	5400 5300 5400 5050
+Wire Wire Line
+	5600 5300 5400 5300
+$Comp
+L Device:R R?
+U 1 1 63C30922
+P 4200 5200
+AR Path="/63C30922" Ref="R?"  Part="1" 
+AR Path="/639A4CF9/63C30922" Ref="R9"  Part="1" 
+F 0 "R9" V 3993 5200 50  0000 C CNN
+F 1 "1K" V 4084 5200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4130 5200 50  0001 C CNN
+F 3 "~" H 4200 5200 50  0001 C CNN
+F 4 "SMD" H 4200 5200 50  0001 C CNN "Package Type"
+	1    4200 5200
+	0    1    1    0   
+$EndComp
+Text GLabel 5700 5050 2    50   Input ~ 0
+V_MOT
+$Comp
+L Device:D D?
+U 1 1 63C3092C
+P 5150 5350
+AR Path="/63C3092C" Ref="D?"  Part="1" 
+AR Path="/639A4CF9/63C3092C" Ref="D6"  Part="1" 
+F 0 "D6" H 5150 5133 50  0000 C CNN
+F 1 "SS14" H 5150 5224 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 5150 5350 50  0001 C CNN
+F 3 "~" H 5150 5350 50  0001 C CNN
+F 4 "SMD D_SMA" H 5150 5350 50  0001 C CNN "Package Type"
+F 5 "HY Electronic Corp" H 5150 5350 50  0001 C CNN "Mfr"
+F 6 "SS14" H 5150 5350 50  0001 C CNN "Mfr PartNumber"
+	1    5150 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 63C30933
+P 5800 5300
+AR Path="/63C30933" Ref="J?"  Part="1" 
+AR Path="/639A4CF9/63C30933" Ref="J10"  Part="1" 
+F 0 "J10" H 5880 5292 50  0000 L CNN
+F 1 "FAN_1" H 5880 5201 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 5800 5300 50  0001 C CNN
+F 3 "~" H 5800 5300 50  0001 C CNN
+F 4 "TH" H 5800 5300 50  0001 C CNN "Package Type"
+	1    5800 5300
+	1    0    0    -1  
+$EndComp
+Text Label 3550 5200 0    50   ~ 0
+PWM_FAN1
+Text Label 3550 4150 0    50   ~ 0
+PWM_FAN0
+$Comp
+L Transistor_FET:BSS138 Q?
+U 1 1 63C30940
+P 4450 4450
+AR Path="/63C30940" Ref="Q?"  Part="1" 
+AR Path="/639A4CF9/63C30940" Ref="Q1"  Part="1" 
+F 0 "Q1" V 4699 4450 50  0000 C CNN
+F 1 "DMN3713U" V 4790 4450 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4650 4375 50  0001 L CIN
+F 3 "https://www.diodes.com/assets/Datasheets/DMN3713U.pdf" H 4450 4450 50  0001 L CNN
+F 4 "DIODES" H 4450 4450 50  0001 C CNN "Mfr"
+F 5 "DMN3713U" H 4450 4450 50  0001 C CNN "Mfr PartNumber"
+F 6 "SMT" H 4450 4450 50  0001 C CNN "Package Type"
+	1    4450 4450
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_FET:BSS138 Q?
+U 1 1 63C30949
+P 4450 5500
+AR Path="/63C30949" Ref="Q?"  Part="1" 
+AR Path="/639A4CF9/63C30949" Ref="Q2"  Part="1" 
+F 0 "Q2" V 4699 5500 50  0000 C CNN
+F 1 "DMN3713U" V 4790 5500 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4650 5425 50  0001 L CIN
+F 3 "https://www.diodes.com/assets/Datasheets/DMN3713U.pdf" H 4450 5500 50  0001 L CNN
+F 4 "DIODES" H 4450 5500 50  0001 C CNN "Mfr"
+F 5 "DMN3713U" H 4450 5500 50  0001 C CNN "Mfr PartNumber"
+F 6 "SMT" H 4450 5500 50  0001 C CNN "Package Type"
+	1    4450 5500
+	0    1    1    0   
+$EndComp
+Text Notes 12400 9600 0    50   ~ 0
+Copyright NerdSmith.co.uk 2020.\n\nThis source describes Open Hardware and is licensed under the CERN-OHL-Pv2\n\nYou may redistribute and modify this documentation and make products\nusing it under the terms of the CERN-OHL-P v2 (https:/cern.ch/cern-ohl).\nThis documentation is distributed WITHOUT ANY EXPRESS OR IMPLIED\nWARRANTY, INCLUDING OF MERCHANTABILITY, SATISFACTORY QUALITY\nAND FITNESS FOR A PARTICULAR PURPOSE. Please see the CERN-OHL-P v2\nfor applicable conditions
+Connection ~ 10150 6050
+Wire Wire Line
+	10150 8250 10150 8850
+$Comp
+L Device:R R?
+U 1 1 63C30952
+P 4350 6600
+AR Path="/63C30952" Ref="R?"  Part="1" 
+AR Path="/639A4CF9/63C30952" Ref="R13"  Part="1" 
+F 0 "R13" H 4420 6646 50  0000 L CNN
+F 1 "1K" H 4420 6555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4280 6600 50  0001 C CNN
+F 3 "~" H 4350 6600 50  0001 C CNN
+	1    4350 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC817 Q?
+U 1 1 63C30958
+P 4250 7150
+AR Path="/63C30958" Ref="Q?"  Part="1" 
+AR Path="/639A4CF9/63C30958" Ref="Q3"  Part="1" 
+F 0 "Q3" H 4441 7196 50  0000 L CNN
+F 1 "BC817" H 4441 7105 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4450 7075 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC818-D.pdf" H 4250 7150 50  0001 L CNN
+	1    4250 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BZX84Cxx D?
+U 1 1 63C3095E
+P 4750 7300
+AR Path="/63C3095E" Ref="D?"  Part="1" 
+AR Path="/639A4CF9/63C3095E" Ref="D2"  Part="1" 
+F 0 "D2" V 4704 7380 50  0000 L CNN
+F 1 "BZX84Cxx" V 4795 7380 50  0000 L CNN
+F 2 "Diode_SMD:D_SOT-23_ANK" H 4750 7125 50  0001 C CNN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzx84c2v4.pdf" H 4750 7300 50  0001 C CNN
+	1    4750 7300
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:BZX84Cxx D?
+U 1 1 63C30964
+P 6150 7300
+AR Path="/63C30964" Ref="D?"  Part="1" 
+AR Path="/639A4CF9/63C30964" Ref="D7"  Part="1" 
+F 0 "D7" V 6104 7380 50  0000 L CNN
+F 1 "BZX84Cxx" V 6195 7380 50  0000 L CNN
+F 2 "Diode_SMD:D_SOT-23_ANK" H 6150 7125 50  0001 C CNN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzx84c2v4.pdf" H 6150 7300 50  0001 C CNN
+	1    6150 7300
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BCX51 Q?
+U 1 1 63C3096A
+P 5350 7150
+AR Path="/63C3096A" Ref="Q?"  Part="1" 
+AR Path="/639A4CF9/63C3096A" Ref="Q11"  Part="1" 
+F 0 "Q11" H 5541 7104 50  0000 L CNN
+F 1 "BCX51" H 5541 7195 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 5550 7075 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/bcx51_bcx52_bcx53.pdf" H 5350 7150 50  0001 L CNN
+	1    5350 7150
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:BCX56 Q?
+U 1 1 63C30970
+P 5350 6550
+AR Path="/63C30970" Ref="Q?"  Part="1" 
+AR Path="/639A4CF9/63C30970" Ref="Q10"  Part="1" 
+F 0 "Q10" H 5541 6596 50  0000 L CNN
+F 1 "BCX56" H 5541 6505 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 5550 6475 50  0001 L CIN
+F 3 "http://cache.nxp.com/documents/data_sheet/BCP56_BCX56_BC56PA.pdf?pspll=1" H 5350 6550 50  0001 L CNN
+	1    5350 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 6550 5000 6550
+Wire Wire Line
+	5000 6550 5000 6850
+Wire Wire Line
+	5000 7150 5150 7150
+Wire Wire Line
+	5000 6850 4750 6850
+Wire Wire Line
+	4350 6850 4350 6950
+Connection ~ 5000 6850
+Wire Wire Line
+	5000 6850 5000 7150
+Wire Wire Line
+	4350 6850 4350 6750
+Connection ~ 4350 6850
+Wire Wire Line
+	4750 7150 4750 6850
+Connection ~ 4750 6850
+Wire Wire Line
+	4750 6850 4350 6850
+Wire Wire Line
+	4350 7350 4350 7550
+Wire Wire Line
+	4350 7550 4750 7550
+Wire Wire Line
+	4750 7550 4750 7450
+Wire Wire Line
+	4750 7550 5250 7550
+Wire Wire Line
+	5450 7550 5450 7350
+Connection ~ 4750 7550
+Wire Wire Line
+	5450 6950 5450 6850
+Wire Wire Line
+	5450 6350 5450 6250
+Wire Wire Line
+	5450 6250 4350 6250
+Wire Wire Line
+	4350 6250 4350 6450
+$Comp
+L Device:R R?
+U 1 1 63C3098C
+P 5900 6850
+AR Path="/63C3098C" Ref="R?"  Part="1" 
+AR Path="/639A4CF9/63C3098C" Ref="R24"  Part="1" 
+F 0 "R24" V 5693 6850 50  0000 C CNN
+F 1 "10" V 5784 6850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5830 6850 50  0001 C CNN
+F 3 "~" H 5900 6850 50  0001 C CNN
+	1    5900 6850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 63C30992
+P 3950 7000
+AR Path="/63C30992" Ref="R?"  Part="1" 
+AR Path="/639A4CF9/63C30992" Ref="R10"  Part="1" 
+F 0 "R10" H 3880 6954 50  0000 R CNN
+F 1 "1K" H 3880 7045 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3880 7000 50  0001 C CNN
+F 3 "~" H 3950 7000 50  0001 C CNN
+	1    3950 7000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3950 7150 4050 7150
+Wire Wire Line
+	5750 6850 5450 6850
+Connection ~ 5450 6850
+Wire Wire Line
+	5450 6850 5450 6750
+$Comp
+L Diode:PMEG1020EH D?
+U 1 1 63C3099C
+P 6500 7100
+AR Path="/63C3099C" Ref="D?"  Part="1" 
+AR Path="/639A4CF9/63C3099C" Ref="D12"  Part="1" 
+F 0 "D12" V 6454 7179 50  0000 L CNN
+F 1 "PMEG1020EH" V 6545 7179 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123F" H 6500 6925 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/PMEG1020EH_EJ.pdf" H 6500 7100 50  0001 C CNN
+	1    6500 7100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5450 7550 6150 7550
+Wire Wire Line
+	6500 7550 6500 7250
+Connection ~ 5450 7550
+Wire Wire Line
+	6150 7450 6150 7550
+Connection ~ 6150 7550
+Wire Wire Line
+	6150 7550 6500 7550
+Wire Wire Line
+	6050 6850 6150 6850
+Wire Wire Line
+	6150 6850 6150 7150
+Wire Wire Line
+	6150 6850 6500 6850
+Wire Wire Line
+	6500 6850 6500 6950
+Connection ~ 6150 6850
+Wire Wire Line
+	6500 6850 6500 6700
+Connection ~ 6500 6850
+Text GLabel 6500 6700 1    50   Input ~ 0
+MOS_HBED
+$Comp
+L Device:R R?
+U 1 1 63C309B0
+P 4350 8250
+AR Path="/63C309B0" Ref="R?"  Part="1" 
+AR Path="/639A4CF9/63C309B0" Ref="R14"  Part="1" 
+F 0 "R14" H 4420 8296 50  0000 L CNN
+F 1 "1K" H 4420 8205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4280 8250 50  0001 C CNN
+F 3 "~" H 4350 8250 50  0001 C CNN
+	1    4350 8250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC817 Q?
+U 1 1 63C309B6
+P 4250 8800
+AR Path="/63C309B6" Ref="Q?"  Part="1" 
+AR Path="/639A4CF9/63C309B6" Ref="Q4"  Part="1" 
+F 0 "Q4" H 4441 8846 50  0000 L CNN
+F 1 "BC817" H 4441 8755 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4450 8725 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC818-D.pdf" H 4250 8800 50  0001 L CNN
+	1    4250 8800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BZX84Cxx D?
+U 1 1 63C309BC
+P 4750 8950
+AR Path="/63C309BC" Ref="D?"  Part="1" 
+AR Path="/639A4CF9/63C309BC" Ref="D3"  Part="1" 
+F 0 "D3" V 4704 9030 50  0000 L CNN
+F 1 "BZX84Cxx" V 4795 9030 50  0000 L CNN
+F 2 "Diode_SMD:D_SOT-23_ANK" H 4750 8775 50  0001 C CNN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzx84c2v4.pdf" H 4750 8950 50  0001 C CNN
+	1    4750 8950
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:BZX84Cxx D?
+U 1 1 63C309C2
+P 6150 8950
+AR Path="/63C309C2" Ref="D?"  Part="1" 
+AR Path="/639A4CF9/63C309C2" Ref="D8"  Part="1" 
+F 0 "D8" V 6104 9030 50  0000 L CNN
+F 1 "BZX84Cxx" V 6195 9030 50  0000 L CNN
+F 2 "Diode_SMD:D_SOT-23_ANK" H 6150 8775 50  0001 C CNN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzx84c2v4.pdf" H 6150 8950 50  0001 C CNN
+	1    6150 8950
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BCX51 Q?
+U 1 1 63C309C8
+P 5350 8800
+AR Path="/63C309C8" Ref="Q?"  Part="1" 
+AR Path="/639A4CF9/63C309C8" Ref="Q13"  Part="1" 
+F 0 "Q13" H 5541 8754 50  0000 L CNN
+F 1 "BCX51" H 5541 8845 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 5550 8725 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/bcx51_bcx52_bcx53.pdf" H 5350 8800 50  0001 L CNN
+	1    5350 8800
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:BCX56 Q?
+U 1 1 63C309CE
+P 5350 8200
+AR Path="/63C309CE" Ref="Q?"  Part="1" 
+AR Path="/639A4CF9/63C309CE" Ref="Q12"  Part="1" 
+F 0 "Q12" H 5541 8246 50  0000 L CNN
+F 1 "BCX56" H 5541 8155 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 5550 8125 50  0001 L CIN
+F 3 "http://cache.nxp.com/documents/data_sheet/BCP56_BCX56_BC56PA.pdf?pspll=1" H 5350 8200 50  0001 L CNN
+	1    5350 8200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 8200 5000 8200
+Wire Wire Line
+	5000 8200 5000 8500
+Wire Wire Line
+	5000 8800 5150 8800
+Wire Wire Line
+	5000 8500 4750 8500
+Wire Wire Line
+	4350 8500 4350 8600
+Connection ~ 5000 8500
+Wire Wire Line
+	5000 8500 5000 8800
+Wire Wire Line
+	4350 8500 4350 8400
+Connection ~ 4350 8500
+Wire Wire Line
+	4750 8800 4750 8500
+Connection ~ 4750 8500
+Wire Wire Line
+	4750 8500 4350 8500
+Wire Wire Line
+	4350 9000 4350 9200
+Wire Wire Line
+	4350 9200 4750 9200
+Wire Wire Line
+	4750 9200 4750 9100
+Wire Wire Line
+	4750 9200 5250 9200
+Wire Wire Line
+	5450 9200 5450 9000
+Connection ~ 4750 9200
+Wire Wire Line
+	5450 8600 5450 8500
+Wire Wire Line
+	5450 8000 5450 7900
+Wire Wire Line
+	5450 7900 4350 7900
+Wire Wire Line
+	4350 7900 4350 8100
+$Comp
+L Device:R R?
+U 1 1 63C309EA
+P 5900 8500
+AR Path="/63C309EA" Ref="R?"  Part="1" 
+AR Path="/639A4CF9/63C309EA" Ref="R25"  Part="1" 
+F 0 "R25" V 5693 8500 50  0000 C CNN
+F 1 "10" V 5784 8500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5830 8500 50  0001 C CNN
+F 3 "~" H 5900 8500 50  0001 C CNN
+	1    5900 8500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 63C309F0
+P 3950 8650
+AR Path="/63C309F0" Ref="R?"  Part="1" 
+AR Path="/639A4CF9/63C309F0" Ref="R11"  Part="1" 
+F 0 "R11" H 3880 8604 50  0000 R CNN
+F 1 "1K" H 3880 8695 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3880 8650 50  0001 C CNN
+F 3 "~" H 3950 8650 50  0001 C CNN
+	1    3950 8650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3950 8800 4050 8800
+Wire Wire Line
+	5750 8500 5450 8500
+Connection ~ 5450 8500
+Wire Wire Line
+	5450 8500 5450 8400
+$Comp
+L Diode:PMEG1020EH D?
+U 1 1 63C309FA
+P 6500 8750
+AR Path="/63C309FA" Ref="D?"  Part="1" 
+AR Path="/639A4CF9/63C309FA" Ref="D13"  Part="1" 
+F 0 "D13" V 6454 8829 50  0000 L CNN
+F 1 "PMEG1020EH" V 6545 8829 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123F" H 6500 8575 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/PMEG1020EH_EJ.pdf" H 6500 8750 50  0001 C CNN
+	1    6500 8750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5450 9200 6150 9200
+Wire Wire Line
+	6500 9200 6500 8900
+Connection ~ 5450 9200
+Wire Wire Line
+	6150 9100 6150 9200
+Connection ~ 6150 9200
+Wire Wire Line
+	6150 9200 6500 9200
+Wire Wire Line
+	6050 8500 6150 8500
+Wire Wire Line
+	6150 8500 6150 8800
+Wire Wire Line
+	6150 8500 6500 8500
+Wire Wire Line
+	6500 8500 6500 8600
+Connection ~ 6150 8500
+Wire Wire Line
+	6500 8500 6500 8350
+Connection ~ 6500 8500
+Text GLabel 6500 8350 1    50   Input ~ 0
+MOS_HE0
+$Comp
+L Device:R R?
+U 1 1 63C30A0E
+P 4350 9800
+AR Path="/63C30A0E" Ref="R?"  Part="1" 
+AR Path="/639A4CF9/63C30A0E" Ref="R15"  Part="1" 
+F 0 "R15" H 4420 9846 50  0000 L CNN
+F 1 "1K" H 4420 9755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4280 9800 50  0001 C CNN
+F 3 "~" H 4350 9800 50  0001 C CNN
+	1    4350 9800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC817 Q?
+U 1 1 63C30A14
+P 4250 10350
+AR Path="/63C30A14" Ref="Q?"  Part="1" 
+AR Path="/639A4CF9/63C30A14" Ref="Q5"  Part="1" 
+F 0 "Q5" H 4441 10396 50  0000 L CNN
+F 1 "BC817" H 4441 10305 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4450 10275 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC818-D.pdf" H 4250 10350 50  0001 L CNN
+	1    4250 10350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BZX84Cxx D?
+U 1 1 63C30A1A
+P 4750 10500
+AR Path="/63C30A1A" Ref="D?"  Part="1" 
+AR Path="/639A4CF9/63C30A1A" Ref="D4"  Part="1" 
+F 0 "D4" V 4704 10580 50  0000 L CNN
+F 1 "BZX84Cxx" V 4795 10580 50  0000 L CNN
+F 2 "Diode_SMD:D_SOT-23_ANK" H 4750 10325 50  0001 C CNN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzx84c2v4.pdf" H 4750 10500 50  0001 C CNN
+	1    4750 10500
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:BZX84Cxx D?
+U 1 1 63C30A20
+P 6150 10500
+AR Path="/63C30A20" Ref="D?"  Part="1" 
+AR Path="/639A4CF9/63C30A20" Ref="D9"  Part="1" 
+F 0 "D9" V 6104 10580 50  0000 L CNN
+F 1 "BZX84Cxx" V 6195 10580 50  0000 L CNN
+F 2 "Diode_SMD:D_SOT-23_ANK" H 6150 10325 50  0001 C CNN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzx84c2v4.pdf" H 6150 10500 50  0001 C CNN
+	1    6150 10500
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BCX51 Q?
+U 1 1 63C30A26
+P 5350 10350
+AR Path="/63C30A26" Ref="Q?"  Part="1" 
+AR Path="/639A4CF9/63C30A26" Ref="Q15"  Part="1" 
+F 0 "Q15" H 5541 10304 50  0000 L CNN
+F 1 "BCX51" H 5541 10395 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 5550 10275 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/bcx51_bcx52_bcx53.pdf" H 5350 10350 50  0001 L CNN
+	1    5350 10350
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:BCX56 Q?
+U 1 1 63C30A2C
+P 5350 9750
+AR Path="/63C30A2C" Ref="Q?"  Part="1" 
+AR Path="/639A4CF9/63C30A2C" Ref="Q14"  Part="1" 
+F 0 "Q14" H 5541 9796 50  0000 L CNN
+F 1 "BCX56" H 5541 9705 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 5550 9675 50  0001 L CIN
+F 3 "http://cache.nxp.com/documents/data_sheet/BCP56_BCX56_BC56PA.pdf?pspll=1" H 5350 9750 50  0001 L CNN
+	1    5350 9750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 9750 5000 9750
+Wire Wire Line
+	5000 9750 5000 10050
+Wire Wire Line
+	5000 10350 5150 10350
+Wire Wire Line
+	5000 10050 4750 10050
+Wire Wire Line
+	4350 10050 4350 10150
+Connection ~ 5000 10050
+Wire Wire Line
+	5000 10050 5000 10350
+Wire Wire Line
+	4350 10050 4350 9950
+Connection ~ 4350 10050
+Wire Wire Line
+	4750 10350 4750 10050
+Connection ~ 4750 10050
+Wire Wire Line
+	4750 10050 4350 10050
+Wire Wire Line
+	4350 10550 4350 10750
+Wire Wire Line
+	4350 10750 4750 10750
+Wire Wire Line
+	4750 10750 4750 10650
+Wire Wire Line
+	4750 10750 5250 10750
+Wire Wire Line
+	5450 10750 5450 10550
+Connection ~ 4750 10750
+Wire Wire Line
+	5450 10150 5450 10050
+Wire Wire Line
+	5450 9550 5450 9450
+Wire Wire Line
+	5450 9450 4350 9450
+Wire Wire Line
+	4350 9450 4350 9650
+$Comp
+L Device:R R?
+U 1 1 63C30A48
+P 5900 10050
+AR Path="/63C30A48" Ref="R?"  Part="1" 
+AR Path="/639A4CF9/63C30A48" Ref="R26"  Part="1" 
+F 0 "R26" V 5693 10050 50  0000 C CNN
+F 1 "10" V 5784 10050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5830 10050 50  0001 C CNN
+F 3 "~" H 5900 10050 50  0001 C CNN
+	1    5900 10050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 63C30A4E
+P 3950 10200
+AR Path="/63C30A4E" Ref="R?"  Part="1" 
+AR Path="/639A4CF9/63C30A4E" Ref="R12"  Part="1" 
+F 0 "R12" H 3880 10154 50  0000 R CNN
+F 1 "1K" H 3880 10245 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3880 10200 50  0001 C CNN
+F 3 "~" H 3950 10200 50  0001 C CNN
+	1    3950 10200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3950 10350 4050 10350
+Wire Wire Line
+	5750 10050 5450 10050
+Connection ~ 5450 10050
+Wire Wire Line
+	5450 10050 5450 9950
+$Comp
+L Diode:PMEG1020EH D?
+U 1 1 63C30A58
+P 6500 10300
+AR Path="/63C30A58" Ref="D?"  Part="1" 
+AR Path="/639A4CF9/63C30A58" Ref="D14"  Part="1" 
+F 0 "D14" V 6454 10379 50  0000 L CNN
+F 1 "PMEG1020EH" V 6545 10379 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123F" H 6500 10125 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/PMEG1020EH_EJ.pdf" H 6500 10300 50  0001 C CNN
+	1    6500 10300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5450 10750 6150 10750
+Wire Wire Line
+	6500 10750 6500 10450
+Connection ~ 5450 10750
+Wire Wire Line
+	6150 10650 6150 10750
+Connection ~ 6150 10750
+Wire Wire Line
+	6150 10750 6500 10750
+Wire Wire Line
+	6050 10050 6150 10050
+Wire Wire Line
+	6150 10050 6150 10350
+Wire Wire Line
+	6150 10050 6500 10050
+Wire Wire Line
+	6500 10050 6500 10150
+Connection ~ 6150 10050
+Wire Wire Line
+	6500 10050 6500 9900
+Connection ~ 6500 10050
+Text GLabel 6500 9900 1    50   Input ~ 0
+MOS_HE1
+Wire Wire Line
+	3950 6850 3250 6850
+Wire Wire Line
+	3950 8500 3250 8500
+Wire Wire Line
+	3950 10050 3250 10050
+Text HLabel 2350 1400 0    50   Input ~ 0
+END_X
+Text HLabel 2350 1800 0    50   Input ~ 0
+END_Y
+Text HLabel 2350 2200 0    50   Input ~ 0
+END_Z
+Text HLabel 2350 2600 0    50   Input ~ 0
+END_E0
+Text HLabel 2350 3050 0    50   Input ~ 0
+END_E1
+Text HLabel 3900 1400 0    50   Input ~ 0
+TEMP_BED
+Text HLabel 4900 1900 0    50   Input ~ 0
+TEMP_E0
+Text HLabel 4900 2700 0    50   Input ~ 0
+TEMP_E1
+Text HLabel 3500 4150 0    50   Input ~ 0
+PWM_FAN0
+Text HLabel 3500 5200 0    50   Input ~ 0
+PWM_FAN1
+Text HLabel 3250 6850 0    50   Input ~ 0
+PWMH_BED
+Text HLabel 3250 8500 0    50   Input ~ 0
+PWMH_E0
+Text HLabel 3250 10050 0    50   Input ~ 0
+PWMH_E1
+Text HLabel 7850 1450 0    50   Input ~ 0
+SPI_MOSI
+Text HLabel 7850 1550 0    50   Input ~ 0
+SPI_MISO
+Text HLabel 7850 1650 0    50   Input ~ 0
+SPI_SCK
+Text HLabel 7850 1750 0    50   Input ~ 0
+CS_X
+Text HLabel 7850 1850 0    50   Input ~ 0
+CS_Y
+Text HLabel 7850 1950 0    50   Input ~ 0
+CS_Z
+Text HLabel 7850 2050 0    50   Input ~ 0
+CS_E0
+Text HLabel 7850 2150 0    50   Input ~ 0
+CS_E1
+Text HLabel 8450 2400 0    50   Input ~ 0
+EN_X
+Text HLabel 8450 3000 0    50   Input ~ 0
+STEP_X
+Text HLabel 8450 3100 0    50   Input ~ 0
+DIR_X
+Text HLabel 8450 3600 0    50   Input ~ 0
+EN_Y
+Text HLabel 8450 4200 0    50   Input ~ 0
+STEP_Y
+Text HLabel 8450 4300 0    50   Input ~ 0
+DIR_Y
+Text HLabel 8450 4900 0    50   Input ~ 0
+EN_Z
+Text HLabel 8450 5500 0    50   Input ~ 0
+STEP_Z
+Text HLabel 8450 5600 0    50   Input ~ 0
+DIR_Z
+Text HLabel 8450 6800 0    50   Input ~ 0
+EN_E0
+Text HLabel 8450 7400 0    50   Input ~ 0
+STEP_E0
+Text HLabel 8450 7500 0    50   Input ~ 0
+DIR_E0
+Text HLabel 8450 8150 0    50   Input ~ 0
+EN_E1
+Text HLabel 8450 8750 0    50   Input ~ 0
+STEP_E1
+Text HLabel 8450 8850 0    50   Input ~ 0
+DIR_E1
+Entry Wire Line
+	8650 1550 8550 1450
+Entry Wire Line
+	8550 1550 8650 1650
+Wire Wire Line
+	8550 1450 7850 1450
+Text Label 8000 1450 0    50   ~ 0
+SPI_MOSI
+Text Label 8000 1550 0    50   ~ 0
+SPI_MISO
+Text Label 8000 1650 0    50   ~ 0
+SPI_SCK
+Text Label 8000 1750 0    50   ~ 0
+CS_X
+Text Label 8000 1850 0    50   ~ 0
+CS_Y
+Text Label 8000 1950 0    50   ~ 0
+CS_Z
+Text Label 8000 2050 0    50   ~ 0
+CS_E0
+Text Label 8000 2150 0    50   ~ 0
+CS_E1
+Wire Wire Line
+	8550 1550 7850 1550
+Wire Wire Line
+	7850 1650 8550 1650
+Wire Wire Line
+	7850 1750 8550 1750
+Wire Wire Line
+	7850 1850 8550 1850
+Wire Wire Line
+	7850 1950 8550 1950
+Wire Wire Line
+	7850 2050 8550 2050
+Wire Wire Line
+	7850 2150 8550 2150
+Entry Wire Line
+	8550 1650 8650 1750
+Entry Wire Line
+	8550 1750 8650 1850
+Entry Wire Line
+	8550 1850 8650 1950
+Entry Wire Line
+	8550 1950 8650 2050
+Entry Wire Line
+	8550 2050 8650 2150
+Entry Wire Line
+	8550 2150 8650 2250
+Wire Wire Line
+	5450 6250 5650 6250
+Connection ~ 5450 6250
+Text GLabel 5650 6250 2    50   Input ~ 0
+V_HEAT
+Text GLabel 5650 7900 2    50   Input ~ 0
+V_HEAT
+Text GLabel 5650 9450 2    50   Input ~ 0
+V_HEAT
+Wire Wire Line
+	5650 9450 5450 9450
+Connection ~ 5450 9450
+Wire Wire Line
+	5650 7900 5450 7900
+Connection ~ 5450 7900
+$Comp
+L power:GND #PWR?
+U 1 1 64FB52B3
+P 5250 7650
+AR Path="/64FB52B3" Ref="#PWR?"  Part="1" 
+AR Path="/639A4CF9/64FB52B3" Ref="#PWR0115"  Part="1" 
+F 0 "#PWR0115" H 5250 7400 50  0001 C CNN
+F 1 "GND" H 5255 7477 50  0000 C CNN
+F 2 "" H 5250 7650 50  0001 C CNN
+F 3 "" H 5250 7650 50  0001 C CNN
+	1    5250 7650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 64FB7474
+P 5250 9300
+AR Path="/64FB7474" Ref="#PWR?"  Part="1" 
+AR Path="/639A4CF9/64FB7474" Ref="#PWR0116"  Part="1" 
+F 0 "#PWR0116" H 5250 9050 50  0001 C CNN
+F 1 "GND" H 5255 9127 50  0000 C CNN
+F 2 "" H 5250 9300 50  0001 C CNN
+F 3 "" H 5250 9300 50  0001 C CNN
+	1    5250 9300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 64FB7BCA
+P 5250 10850
+AR Path="/64FB7BCA" Ref="#PWR?"  Part="1" 
+AR Path="/639A4CF9/64FB7BCA" Ref="#PWR0117"  Part="1" 
+F 0 "#PWR0117" H 5250 10600 50  0001 C CNN
+F 1 "GND" H 5255 10677 50  0000 C CNN
+F 2 "" H 5250 10850 50  0001 C CNN
+F 3 "" H 5250 10850 50  0001 C CNN
+	1    5250 10850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 7650 5250 7550
+Connection ~ 5250 7550
+Wire Wire Line
+	5250 7550 5450 7550
+Wire Wire Line
+	5250 9300 5250 9200
+Connection ~ 5250 9200
+Wire Wire Line
+	5250 9200 5450 9200
+Wire Wire Line
+	5250 10850 5250 10750
+Connection ~ 5250 10750
+Wire Wire Line
+	5250 10750 5450 10750
+Wire Bus Line
+	8650 1550 8650 8650
+$EndSCHEMATC

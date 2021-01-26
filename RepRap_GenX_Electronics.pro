@@ -1,4 +1,4 @@
-update=09/01/2021 21:11:01
+update=26/01/2021 20:25:56
 version=1
 last_client=kicad
 [general]
@@ -22,7 +22,7 @@ AllowMicroVias=0
 AllowBlindVias=0
 RequireCourtyardDefinitions=0
 ProhibitOverlappingCourtyards=1
-MinTrackWidth=0.2
+MinTrackWidth=0.1524
 MinViaDiameter=0.4
 MinViaDrill=0.3
 MinMicroViaDiameter=0.2
@@ -227,7 +227,7 @@ Enabled=0
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/Default]
 Name=Default
-Clearance=0.2
+Clearance=0.1524
 TrackWidth=0.25
 ViaDiameter=0.8
 ViaDrill=0.4
@@ -238,7 +238,7 @@ dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/1]
 Name=HEAT_PWR
-Clearance=0.2
+Clearance=0.1524
 TrackWidth=1
 ViaDiameter=0.8
 ViaDrill=0.4
@@ -249,7 +249,7 @@ dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/2]
 Name=V_HEAT
-Clearance=0.2
+Clearance=0.1524
 TrackWidth=0.25
 ViaDiameter=0.8
 ViaDrill=0.4
@@ -260,7 +260,7 @@ dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/3]
 Name=V_MOT
-Clearance=0.2
+Clearance=0.1524
 TrackWidth=1
 ViaDiameter=0.8
 ViaDrill=0.4
@@ -271,7 +271,7 @@ dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/4]
 Name=V_PWR
-Clearance=0.2
+Clearance=0.1524
 TrackWidth=0.25
 ViaDiameter=0.8
 ViaDrill=0.4
@@ -282,7 +282,7 @@ dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/5]
 Name=V_STEP
-Clearance=0.2
+Clearance=0.1524
 TrackWidth=1
 ViaDiameter=0.8
 ViaDrill=0.4
