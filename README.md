@@ -34,6 +34,13 @@ As the majority of components are surface mount (SMD) with only a few through-ho
 
 ## News
 
+### 2020-01-26
+  - Added totem pole drivers for the heater MOSFET's - switching time is <1uS so it should be possible to drive at 1MHz frequency if ever needed
+  - Altered heater LED indicators to Red
+  - Validated Fan PWM MOSFET's - 4mA is enough to drive at around 4uS which is plenty fast enough and won't overload GPIO pins
+  - Altered layout to accomodate new components
+  - Split MCU controlled components into their own sheet - not enough space on a single sheet for everything!
+
 ### 2020-01-21
   - Abandoned the idea of putting in a Pi Interface - difficult to maintain a 2 layer design and route everything for the 2x20pin GPIO interface of the Pi
   - Added ZVD Ideal diode for 5V output
