@@ -34,6 +34,11 @@ As the majority of components are surface mount (SMD) with only a few through-ho
 
 ## News
 
+### 2020-01-28
+  - Added 3.3v and I2C to the breakout port for possible expansion
+  - Shifted E0/E1 Filament sensor feedback to make room for I2C port
+  - Adjusted some routes for the 2x4 breakout port
+
 ### 2020-01-26
   - Added totem pole drivers for the heater MOSFET's - switching time is <1uS so it should be possible to drive at 1MHz frequency if ever needed
   - Altered heater LED indicators to Red

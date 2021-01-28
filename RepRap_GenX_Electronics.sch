@@ -580,10 +580,6 @@ Entry Wire Line
 Entry Wire Line
 	8400 8650 8500 8750
 Entry Wire Line
-	8400 8550 8500 8650
-Entry Wire Line
-	8400 8450 8500 8550
-Entry Wire Line
 	8400 8350 8500 8450
 Entry Wire Line
 	8400 8250 8500 8350
@@ -1068,9 +1064,9 @@ Text Label 7900 8250 0    50   ~ 0
 END_Y
 Text Label 7900 8150 0    50   ~ 0
 END_X
-Text Label 7900 8450 0    50   ~ 0
+Text Label 6000 8850 0    50   ~ 0
 END_E0
-Text Label 7900 8550 0    50   ~ 0
+Text Label 6000 8950 0    50   ~ 0
 END_E1
 Wire Wire Line
 	6400 7950 5950 7950
@@ -1312,10 +1308,6 @@ F 3 "" H 7400 9650 50  0001 C CNN
 	1    7400 9650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7800 8550 8400 8550
-Wire Wire Line
-	7800 8450 8400 8450
 Wire Wire Line
 	7800 8350 8400 8350
 Wire Wire Line
@@ -1605,7 +1597,6 @@ Entry Wire Line
 	5950 8650 5850 8750
 Entry Wire Line
 	5950 8750 5850 8850
-NoConn ~ 5950 8850
 Wire Wire Line
 	7800 7350 8200 7350
 Wire Wire Line
@@ -1654,7 +1645,6 @@ F 3 "" H 4850 7400 50  0001 C CNN
 	1    4850 7400
 	1    0    0    -1  
 $EndComp
-NoConn ~ 5950 8950
 Wire Wire Line
 	6400 8950 5950 8950
 Wire Wire Line
@@ -1859,48 +1849,18 @@ Connection ~ 4150 1700
 Wire Wire Line
 	4150 1700 4350 1700
 $Comp
-L Connector_Generic:Conn_02x02_Counter_Clockwise J24
-U 1 1 60E81E8D
-P 10700 2700
-F 0 "J24" H 10750 2917 50  0000 C CNN
-F 1 "Conn_02x02_Counter_Clockwise" H 10750 2826 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 10700 2700 50  0001 C CNN
-F 3 "~" H 10700 2700 50  0001 C CNN
-F 4 "TH" H 10700 2700 50  0001 C CNN "Package Type"
-	1    10700 2700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10500 2700 10400 2700
-Wire Wire Line
-	10400 2700 10400 2800
-Wire Wire Line
-	10400 2800 10500 2800
-Wire Wire Line
-	11100 2800 11100 2700
-Wire Wire Line
-	11100 2700 11000 2700
-Wire Wire Line
-	11000 2800 11100 2800
-$Comp
 L power:GND #PWR07
 U 1 1 60FD29A0
-P 10400 2900
-F 0 "#PWR07" H 10400 2650 50  0001 C CNN
-F 1 "GND" H 10405 2727 50  0000 C CNN
-F 2 "" H 10400 2900 50  0001 C CNN
-F 3 "" H 10400 2900 50  0001 C CNN
-	1    10400 2900
+P 10400 3300
+F 0 "#PWR07" H 10400 3050 50  0001 C CNN
+F 1 "GND" H 10405 3127 50  0000 C CNN
+F 2 "" H 10400 3300 50  0001 C CNN
+F 3 "" H 10400 3300 50  0001 C CNN
+	1    10400 3300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	10400 2900 10400 2800
-Connection ~ 10400 2800
-Text GLabel 11100 2450 1    50   Input ~ 0
+Text GLabel 11100 2500 1    50   Input ~ 0
 ZVD_5V
-Wire Wire Line
-	11100 2450 11100 2700
-Connection ~ 11100 2700
 NoConn ~ 6400 7350
 $Comp
 L Device:LED D10
@@ -2401,10 +2361,97 @@ Text Label 9250 9800 0    50   ~ 0
 DIR_E1
 Text Notes 12600 9750 0    50   ~ 0
 Copyright NerdSmith.co.uk 2020.\n\nThis source describes Open Hardware and is licensed under the CERN-OHL-Pv2\n\nYou may redistribute and modify this documentation and make products\nusing it under the terms of the CERN-OHL-P v2 (https:/cern.ch/cern-ohl).\nThis documentation is distributed WITHOUT ANY EXPRESS OR IMPLIED\nWARRANTY, INCLUDING OF MERCHANTABILITY, SATISFACTORY QUALITY\nAND FITNESS FOR A PARTICULAR PURPOSE. Please see the CERN-OHL-P v2\nfor applicable conditions
+Entry Wire Line
+	5950 8850 5850 8950
+Entry Wire Line
+	5950 8950 5850 9050
+Text GLabel 8050 8450 2    50   Input ~ 0
+I2C1_SDA
+Text GLabel 8050 8550 2    50   Input ~ 0
+I2C1_SCL
+Wire Wire Line
+	7800 8450 8050 8450
+Wire Wire Line
+	7800 8550 8050 8550
+Text GLabel 10050 2800 0    50   Input ~ 0
+I2C1_SDA
+Text GLabel 11300 2800 2    50   Input ~ 0
+I2C1_SCL
+Wire Wire Line
+	11300 2800 11000 2800
+Wire Wire Line
+	10500 2800 10050 2800
+Wire Wire Line
+	11000 3000 11100 3000
+Wire Wire Line
+	11100 3000 11100 3100
+Wire Wire Line
+	11100 3100 10400 3100
+Wire Wire Line
+	10400 3100 10400 3000
+Wire Wire Line
+	10400 3000 10500 3000
+Wire Wire Line
+	10400 3100 10400 3300
+Connection ~ 10400 3100
+Wire Wire Line
+	10500 2700 10400 2700
+Wire Wire Line
+	10400 2700 10400 2600
+Wire Wire Line
+	10400 2600 11100 2600
+Wire Wire Line
+	11100 2600 11100 2700
+Wire Wire Line
+	11100 2700 11000 2700
+Wire Wire Line
+	11100 2600 11100 2500
+Connection ~ 11100 2600
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J24
+U 1 1 605418FF
+P 10700 2800
+F 0 "J24" H 10750 3117 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 10750 3026 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 10700 2800 50  0001 C CNN
+F 3 "~" H 10700 2800 50  0001 C CNN
+	1    10700 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10500 2900 10200 2900
+Wire Wire Line
+	10200 2900 10200 2400
+Wire Wire Line
+	11000 2900 11250 2900
+Wire Wire Line
+	11250 2900 11250 2400
 Wire Bus Line
 	5850 7650 5850 10350
 Wire Bus Line
 	8500 6050 8500 10350
 Wire Bus Line
 	9050 6400 9050 10350
+$Comp
+L power:VDD #PWR0118
+U 1 1 6063A334
+P 10200 2400
+F 0 "#PWR0118" H 10200 2250 50  0001 C CNN
+F 1 "VDD" H 10215 2573 50  0000 C CNN
+F 2 "" H 10200 2400 50  0001 C CNN
+F 3 "" H 10200 2400 50  0001 C CNN
+	1    10200 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0119
+U 1 1 6063ACAF
+P 11250 2400
+F 0 "#PWR0119" H 11250 2250 50  0001 C CNN
+F 1 "VDD" H 11265 2573 50  0000 C CNN
+F 2 "" H 11250 2400 50  0001 C CNN
+F 3 "" H 11250 2400 50  0001 C CNN
+	1    11250 2400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
